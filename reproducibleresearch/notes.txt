@@ -1,0 +1,21 @@
+- Concepts and Ideas
+- Ultimate standard for scientific evidence  are independent
+- Investigators, data, analytic methods, laboratories and instruments
+- Replication is important using previous work due to
+- cost, time, unique events
+
+- 3 types of coding to transform data for the next step
+- Processing code (measured data), analytic code (analytic data), presentation code (computational results) into figures, tables, numerical summaries, + writing for final presentation
+
+- analytic data + analytic code be available
+- documentation
+- standard means of distribution
+
+- literate statistical programming
+- article is stream of text and code, human readable and machine readable content
+- Sweave uses latex and R
+- Knitr newer and better
+
+- Scripting your analysis
+- script everything, comparison made to score of music
+- determine what data you can access

@@ -1,0 +1,238 @@
+- Tabular data
+read.table
+read.csv
+readLines # read lines of text file
+source # read R code files
+dget # also R code files (de-parsed)
+load # (workspace)
+
+- Reading large tables
+- specifying column types for large datasets save lots of time
+initial <- read.table(‘sometb.txt’, nrow=100)
+classes <- sapply(initial, class)
+tabAll <- read.table(‘data table.txt’, colClasses = classes)
+- determine memory usage by row x col x 8 bytes (for numeric)
+- dump / dput writes out but preserves metadata (class of data columns)
+- plain text outputs are better for version control
+- dump to write, source to read
+- dput to write, dget to read
+
+Connections: interface to the outside world
+- file, gfile, zfile, url
+- connection to file source, then use readLines to read
+- usefulness seems to be in partial reading ...
+
+Subsetting
+- [ usually return same class, can be multiple 
+- [[ used for list or data frame, usually single
+- subsetting for [] can be done using numeric index or logic index
+- [[1]][[3]] is the same as [[c(1,3)]]
+- x[c1, c2, drop=FALSE] will return a matrix, whereas without the argument would be a vector
+- x$a will partially match a to list names
+- x[[‘a’]] will not, but x[[‘a’, exact=FALSE]] will
+- x[!is.na(x)] will remove NA values
+- complete.cases seems to give you only complete cases
+
+Vector operation
+- X + Y or X * Y are done element-wise
+- % * % becomes matrix multiplication
+
+Control structures
+for loop
+- seq_along(x) is the same as 1:length(x)
+- seq_len(length(x)) is the same as well
+
+Functions
+- functions are first class objects
+- lazy function means the function returns the last expression
+- function(x, y, …) , the … takes parameters from the child function
+- function(…, x, y) allows you to take unknown number of arguments
+
+Scoping
+- the order is environment objects, base packages last
+- loading a package with library() puts the package in higher order
+- objects and functions have separate namespaces
+- lexical scoping
+- environment is a collection of (symbol, value) pairs
+- only 1 environment with parents, which is the empty()
+- searching in the lexical searches first in current -> parent -> global -> empty
+- function within function
+make.power <- function(n) { pow <- function(x) { x^n } pow }
+cube <- make.power(3)
+square <- make.power(2)
+- cube(3) returns 27, sqaure(2) returns 9
+get(“n”, environment(cube))
+- this fetches the object n in function cube, which is 3
+- lexical scoping means parameters are gotten where functions are defined, as opposed to dynamic scoping where functions is called
+
+- consequence of lexical scoping
+- all objects must be in memory, it has to keep track of the environments, whereas c+ everything is searched for in global environment, therefore hard disk storage is sufficient
+- coding standards
+- always use text editor, indent your code, limit the width, limit the length of individual functions
+
+Dates and Times
+- dates are represented by the Date class, stored internally as # of days since 1970-01-01
+- Times are represented by the POSIX, # of seconds since
+
+POSIXct is a large number defining the time
+POSIXlt has other attributes such as day of the week, of the year
+
+strptime() is a function to read character date string into date class
+posix has tz parameter, use it
+
+handle <- dbConnect(MySQL(), user, db, host)
+dbListTables(handle)
+dbListFields(handle, "<table>")
+dbReadTable(handle, “<table>"
+
+Reading from the web
+- httr package
+html2 = GET(url)
+content2 = content(html2, as = “text”)
+pg1 = GET(url, authenticate(“user”,’passed”))
+
+knitr
+- literate programming
+- knitr takes Rmarkdown and creates markdown documents containing outputs of the code, then turns that into html
+- .Rmd -> .md -> .html
+
+
+‘’’ {r <some name of this portion>, echo = TRUE, results=“hide"}
+<code chunk>
+‘''
+echo decides whether code is printed
+you can hide results
+
+‘’’ {r  scatterplot, fig.height=4}
+par(mar=c(5,4,1,1), las=1)
+plot(x, y, main = “My Simulated Data”)
+‘''
+you can adjust the height
+
+‘’’ {r showtable, results=“asis”}
+library(stable)
+xt <- xtable(summary(fit))
+print(xt, type = “html”)
+‘''
+asis means as is
+the table output will be in html format (good!)
+
+‘’’ {r setoptions, echo = FALSE}
+opts_chunk$set(echo=FALSE, results=“hide”)
+‘''
+this will set the default as the settings specified
+
+cache=TRUE
+store computation results on disk, faster reload time
+
+- lapply : loop over a list and evaluate a function on each element
+- sapply : same as apply but try to simplify result
+- apply : apply a function over the margins of an array (summary of matrices)
+- tapply : apply a function over subsets of a vector
+- mapply : multivariate version of lapply
+
+- split : splits objects into pieces
+
+- an example of lapply
+x <- list( a= 1:5, b = rnorm(10) )
+lapply(x, mean)
+- specify parameters of the function directly by commas after
+lapply(x, mean, na.rm=TRUE)
+- use custom functions as such, get first column of matrices
+lapply(x, function(elt) elt [,1] )
+
+- sapply
+- if the result is a list where every element is length 1, then a vector is returned
+- if the result is a list where every element is a vector of the same length (>1), a matrix is returned
+- if not, then returns list like lapply would
+
+- apply
+- it is most often used to apply a function to the rows or columns of a matrix
+- it can be used with general arrays, e.g. taking the average of an array of matrices
+- is is not really faster than writing a loop, but it works in one line
+
+- apply example
+- function( x, MARGIN, FUN, … )
+- MARGIN is which margin the function should run along, more clear with example
+x <- matrix(rnorm(200), 20, 10)
+- matrix of 20 rows and 10 columns
+apply(x, 2, mean)
+- returns mean of columns, so 10 total
+apply(x, 1, mean)
+- returns mean of rows, so 20 total
+
+rowSums = apply(x, 1, sum)
+rowMeans = apply(x, 1, mean)
+colSums = apply(x, 2,  sum)
+colMeans = apply(x, 2, mean)
+
+- mapply
+mapply( FUN, … , moreArgs = NULL, simplify = TRUE, use.names = TRUE)
+- mapply is useful in running function with multiple parameters, seems to be useful for parameter testing
+
+- tapply
+tapply(X, index, FUN = NULL, … , simplify = TRUE)
+x <- c(rnorm(10), runif(10), rnorm(10, 1))
+f <- gl(3, 10)
+tapply(x, f, mean)
+- this returns the means indexed by f
+
+- split
+function(x, f, drop = FALSE)
+- seems similar to apply, but has one job, split the data apart by the index given, perhaps a quick way to do multi subset
+
+- split can work with multi-levels
+f1 <- gl(2, 5)
+g2 <- gl(5, 2)
+interaction( f1, f2 )
+- gives you 10 levels
+
+- Debugging
+- message : message {}
+- warning : warning {}
+- error : stop {}
+- condition : 
+
+invisible(x)
+- prevents output of a function, output returned but will not print in console
+
+- traceback : prints out the function call stack after an error occurs
+- debug : flags a function for debug mode
+- browser : suspends the execution of a function
+- trace : allows you to insert debugging code
+- recover :
+
+- use traceback() immediately after an error to find where the error occurred
+
+Week 4
+- str function diagnostic and alternative to summary
+- str gives you basic information about any object: function, data frame,  
+
+- rnorm, rpois, rbeta, etc ...
+- d for density
+- r for random number generation
+- p for cumulative distribution
+- q for quantile function
+
+set.seed()
+- they are designed to appear random, but are actually not without setting a random seed, so set a seed.
+
+ppois(4, 2) 
+- returns the probability that x is less than or equal to 4 given the poisson distribution with parameter 2.
+
+sample(1:10, 4, replace=FALSE)
+- samples 4 numbers between 1 to 10 without replacement
+
+R Profiler
+- profiling examines how much time is spent on different parts of the program
+- design first, optimize at the end
+
+ system.time()
+- user time = time charged to CPU for expression
+- elapsed time = “wall clock” time
+- elapsed time < user time when different cores are utilized
+
+Rprof()
+- summaryRprof() is more human readable
+- by.total shows % of total time spent on particular function
+- by.self shows 

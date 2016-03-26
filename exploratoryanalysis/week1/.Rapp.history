@@ -1,0 +1,2430 @@
+gameid
+file_name
+R_file <- paste(dir_data, 'rdata/', today, '/games/', gameid, '/', file_name, '.Rda', sep="")#
+	load(R_file)
+gameData$OFF$home
+gameData$OFF$away
+gameData$OFF$home
+install_bitbucket('ballwiz/ballwiz', auth_user='ballwiz', password='ballwizzy824')
+teamSummary_T <- data.frame(subset(off_data_all, s_type == 'S0' & player == 'Team'#
+	) [, list(#
+		action = sum(action),#
+		poss = sum(poss),#
+		points = sum(points),#
+		p1_0  = sum(p1_0), p1_1  = sum(p1_1), p1 = sum(p1_1) / sum(p1_0 + p1_1),#
+		p2_0  = sum(p2_0), p2_1  = sum(p2_1), p2 = sum(p2_1) / sum(p2_0 + p2_1),#
+		p3_0  = sum(p3_0), p3_1  = sum(p3_1), p3 = sum(p3_1) / sum(p3_0 + p3_1),#
+		p4_0  = sum(p4_0), p4_1  = sum(p4_1), p4 = sum(p4_1) / sum(p4_0 + p4_1),#
+		p5_0  = sum(p5_0 + p7_0 + p9_0 + p11_0), p5_1  = sum(p5_1 + p7_1 + p9_1 + p11_1), p5  = sum(p5_1 + p7_1 + p9_1 + p11_1) / sum(p5_0 + p7_0 + p9_0 + p11_0 + p5_1 + p7_1 + p9_1 + p11_1),#
+		p6_0  = sum(p6_0), p6_1  = sum(p6_1), p6 = sum(p6_1) / sum(p6_0 + p6_1),#
+		p8_0  = sum(p8_0), p8_1  = sum(p8_1), p8 = sum(p8_1) / sum(p8_0 + p8_1),#
+		p10_0 = sum(p10_0), p10_1 = sum(p10_1), p10 = sum(p10_1) / sum(p10_0 + p10_1),#
+		p12_0 = sum(p12_0), p12_1 = sum(p12_1), p12 = sum(p12_1) / sum(p12_0 + p12_1),#
+		p13_0 = sum(p13_0), p13_1 = sum(p13_1), p13 = sum(p13_1) / sum(p13_0 + p13_1),#
+		p14_0 = sum(p14_0), p14_1 = sum(p14_1), p14 = sum(p14_1) / sum(p14_0 + p14_1),#
+		p15_0 = sum(p15_0), p15_1 = sum(p15_1), p15 = sum(p15_1) / sum(p15_0 + p15_1),#
+		p17_0 = sum(p17_0), p17_1 = sum(p17_1), p17 = sum(p17_1) / sum(p17_0 + p17_1),#
+		p18_0 = sum(p18_0), p18_1 = sum(p18_1), p18 = sum(p18_1) / sum(p18_0 + p18_1)#
+		), by = list(team = off)#
+	])#
+	rownames(teamSummary_T) <- teamSummary_T$team
+dataLoad()
+install_bitbucket('ballwiz/ballwiz', auth_user='ballwiz', password='ballwizzy824')
+gameData$TEAM
+teamSummary_T <- data.frame(subset(off_data_all, s_type == 'S0' & player == 'Team'#
+	) [, list(#
+		action = sum(action),#
+		poss = sum(poss),#
+		points = sum(points),#
+		p1_0  = sum(p1_0), p1_1  = sum(p1_1), p1 = sum(p1_1) / sum(p1_0 + p1_1),#
+		p2_0  = sum(p2_0), p2_1  = sum(p2_1), p2 = sum(p2_1) / sum(p2_0 + p2_1),#
+		p3_0  = sum(p3_0), p3_1  = sum(p3_1), p3 = sum(p3_1) / sum(p3_0 + p3_1),#
+		p4_0  = sum(p4_0), p4_1  = sum(p4_1), p4 = sum(p4_1) / sum(p4_0 + p4_1),#
+		p5_0  = sum(p5_0 + p7_0 + p9_0 + p11_0), p5_1  = sum(p5_1 + p7_1 + p9_1 + p11_1), p5  = sum(p5_1 + p7_1 + p9_1 + p11_1) / sum(p5_0 + p7_0 + p9_0 + p11_0 + p5_1 + p7_1 + p9_1 + p11_1),#
+		p6_0  = sum(p6_0), p6_1  = sum(p6_1), p6 = sum(p6_1) / sum(p6_0 + p6_1),#
+		p8_0  = sum(p8_0), p8_1  = sum(p8_1), p8 = sum(p8_1) / sum(p8_0 + p8_1),#
+		p10_0 = sum(p10_0), p10_1 = sum(p10_1), p10 = sum(p10_1) / sum(p10_0 + p10_1),#
+		p12_0 = sum(p12_0), p12_1 = sum(p12_1), p12 = sum(p12_1) / sum(p12_0 + p12_1),#
+		p13_0 = sum(p13_0), p13_1 = sum(p13_1), p13 = sum(p13_1) / sum(p13_0 + p13_1),#
+		p14_0 = sum(p14_0), p14_1 = sum(p14_1), p14 = sum(p14_1) / sum(p14_0 + p14_1),#
+		p15_0 = sum(p15_0), p15_1 = sum(p15_1), p15 = sum(p15_1) / sum(p15_0 + p15_1),#
+		p17_0 = sum(p17_0), p17_1 = sum(p17_1), p17 = sum(p17_1) / sum(p17_0 + p17_1),#
+		p18_0 = sum(p18_0), p18_1 = sum(p18_1), p18 = sum(p18_1) / sum(p18_0 + p18_1)#
+		), by = list(team = off)#
+	])#
+	rownames(teamSummary_T) <- teamSummary_T$team
+library(ballwiz)
+dataLoad()
+teamSummary_T <- data.frame(subset(off_data_all, s_type == 'S0' & player == 'Team'#
+	) [, list(#
+		action = sum(action),#
+		poss = sum(poss),#
+		points = sum(points),#
+		p1_0  = sum(p1_0), p1_1  = sum(p1_1), p1 = sum(p1_1) / sum(p1_0 + p1_1),#
+		p2_0  = sum(p2_0), p2_1  = sum(p2_1), p2 = sum(p2_1) / sum(p2_0 + p2_1),#
+		p3_0  = sum(p3_0), p3_1  = sum(p3_1), p3 = sum(p3_1) / sum(p3_0 + p3_1),#
+		p4_0  = sum(p4_0), p4_1  = sum(p4_1), p4 = sum(p4_1) / sum(p4_0 + p4_1),#
+		p5_0  = sum(p5_0 + p7_0 + p9_0 + p11_0), p5_1  = sum(p5_1 + p7_1 + p9_1 + p11_1), p5  = sum(p5_1 + p7_1 + p9_1 + p11_1) / sum(p5_0 + p7_0 + p9_0 + p11_0 + p5_1 + p7_1 + p9_1 + p11_1),#
+		p6_0  = sum(p6_0), p6_1  = sum(p6_1), p6 = sum(p6_1) / sum(p6_0 + p6_1),#
+		p8_0  = sum(p8_0), p8_1  = sum(p8_1), p8 = sum(p8_1) / sum(p8_0 + p8_1),#
+		p10_0 = sum(p10_0), p10_1 = sum(p10_1), p10 = sum(p10_1) / sum(p10_0 + p10_1),#
+		p12_0 = sum(p12_0), p12_1 = sum(p12_1), p12 = sum(p12_1) / sum(p12_0 + p12_1),#
+		p13_0 = sum(p13_0), p13_1 = sum(p13_1), p13 = sum(p13_1) / sum(p13_0 + p13_1),#
+		p14_0 = sum(p14_0), p14_1 = sum(p14_1), p14 = sum(p14_1) / sum(p14_0 + p14_1),#
+		p15_0 = sum(p15_0), p15_1 = sum(p15_1), p15 = sum(p15_1) / sum(p15_0 + p15_1),#
+		p17_0 = sum(p17_0), p17_1 = sum(p17_1), p17 = sum(p17_1) / sum(p17_0 + p17_1),#
+		p18_0 = sum(p18_0), p18_1 = sum(p18_1), p18 = sum(p18_1) / sum(p18_0 + p18_1)#
+		), by = list(team = off)#
+	])#
+	rownames(teamSummary_T) <- teamSummary_T$team
+teamSummary_T
+subset(off_data_all, player == 'Team')
+subset(off_data_all, p8_1 == 0)
+subset(off_data_all, p8_1 == 1)
+subset(off_data_all, p17_1 == 1)
+R_file <- paste(dir_data, 'rdata/', today, '/games/', gameid, '/', file_name, '.Rda', sep="")#
+	load(R_file)
+today<-'live'
+R_file <- paste(dir_data, 'rdata/', today, '/games/', gameid, '/', file_name, '.Rda', sep="")#
+	load(R_file)
+gameid<-'20150415ATLCHI'
+R_file <- paste(dir_data, 'rdata/', today, '/games/', gameid, '/', file_name, '.Rda', sep="")#
+	load(R_file)
+file_name<-'test'
+R_file <- paste(dir_data, 'rdata/', today, '/games/', gameid, '/', file_name, '.Rda', sep="")#
+	load(R_file)
+gameData$TEAM
+simRun
+simRun('20150415ATLCHI')
+simRun('20150415ATLCHI', 'test')
+install_bitbucket('ballwiz/ballwiz', auth_user='ballwiz', password='ballwizzy824')
+simRun('20150415ATLCHI', 'test')
+temp <- list()
+temp ['a'] <- simRun('20150415ATLCHI', 'test')
+temp [['a']] <- simRun('20150415ATLCHI', 'test')
+temp[['a']]
+temp [['b']] <- simRun('20150415ATLCHI', 'test')
+library('abind')
+install.packages('abind')
+library('abind')
+all.matrix <- abind(temp, along=2)
+dat1=as.data.frame(matrix(rnorm(25),ncol=5))#
+dat2=as.data.frame(matrix(rnorm(25),ncol=5))#
+dat3=as.data.frame(matrix(rnorm(25),ncol=5))#
+#
+all.dat<-list(dat1=dat1,dat2=dat2,dat3=dat3)
+all.dat
+all.matrix <- abind(all.dat, along=3)
+all.matrix
+temp
+temp [['b']] <- simRun('20150415ATLCHI', 'test')$stats$home
+temp [['a']] <- simRun('20150415ATLCHI', 'test')$stats$home
+temp
+all.matrix <- abind(temp, along=2)
+all.matrix
+apply(all.matrix, c(1,2), mean)
+simRun <- function(gameid = "", file_name = "", today = "live") {#
+#
+	# each iteration is approx .25 seconds#
+	# 5000 reiterations cost about 20 minutes#
+	#start <- Sys.time()#
+#
+	R_file <- paste(dir_data, 'rdata/', today, '/games/', gameid, '/', file_name, '.Rda', sep="")#
+	load(R_file)#
+	list2env( gameData, globalenv() )#
+#
+	reb_ft <- function(off_in, def_in) {#
+		reb_p_o <- ifelse(is.na(REB[[off_in]]['ft.o']), 0, REB[[off_in]]['ft.o'])#
+		reb_p_d <- REB[[def_in]]['ft.d']#
+		#y <- rbinom(1, 1, reb_p_o)#
+		y <- 2 - which(rmultinom(1, 1, c(reb_p_o, reb_p_d)) == 1)#
+		# 0 means oreb#
+		# 1 means dreb#
+		if (y == 1) {#
+			poss_add <- 0#
+			type <- "FT.oreb"#
+			state <- "S4"#
+			off_out <- off_in#
+		} else {#
+			poss_add <- 1#
+			state <- "S1"#
+			type <- "FT.dreb"#
+			if(off_in == "away") {#
+				off_out <- "home"#
+			} else {#
+				off_out <- "away"#
+			}#
+		}#
+		return(c(off_out, state, type, poss_add))#
+	}#
+	reb_fg <- function(off_in, def_in) {#
+		reb_p_o <- REB[[off_in]]['fg.o']#
+		reb_p_d <- REB[[def_in]]['fg.d']#
+		# 0 means oreb#
+		# 1 means dreb#
+		# y <- rbinom(1, 1, reb_p_o - reb_p_d)#
+		y <- 2 - which(rmultinom(1, 1, c(reb_p_o, reb_p_d)) == 1)#
+		if (y == 1) {#
+			poss_add <- 0#
+			type <- "FG.oreb"#
+			state <- "S4"#
+			off_out <- off_in#
+		} else {#
+			poss_add <- 1#
+			state <- "S2"#
+			type <- "FG.dreb"#
+			if(off_in == "away") {#
+				off_out <- "home"#
+			} else {#
+				off_out <- "away"#
+			}#
+		}#
+		return(c(off_out, state, type, poss_add))#
+	}#
+#
+	# RESULTS CONTAINER#
+	stats <- list(#
+		away = data.frame(#
+			#player = rownames(ACT$away),#
+			FGM = 0,#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(ACT$away)#
+		),#
+		home = data.frame(#
+			#player = rownames(ACT$home),#
+			FGM = 0,#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(ACT$home)#
+		)#
+	)#
+#
+	reb.stats <- data.frame(#
+		FG.oreb = rep(0, 2),#
+		FG.dreb = rep(0, 2),#
+		FT.oreb = rep(0, 2),#
+		FT.dreb = rep(0, 2),#
+		row.names=c('away', 'home')#
+	)#
+#
+	poss.tot <- 0#
+	dat_replay <- list()#
+	box_replay <- list()#
+#
+	off <- sample( c("away", "home"), size = 1, prob = c(1, 1))#
+	state <- "S1"#
+	poss <- 1#
+	ascore <- 0#
+	hscore <- 0#
+	while (poss < poss.n) {#
+		poss.tot <- poss.tot + 1#
+		prog <- as.character(ceiling(poss / poss.n * 48))#
+		sc_diff <- if (abs(ascore - hscore) > 15) {'runaway'} else if (abs(ascore - hscore) > 7) {'notclose'} else {'close'}#
+		if (off == "away") {#
+			def <- 'home'		#
+		} else {#
+			def <- 'away'#
+		}#
+		off_pl <- rownames(ACT [[off]] ) [which(rmultinom(1, 1, ACT [[off]] [, state]) == 1)]	#
+		#off_pl <- names(ACT [[off]] [[prog]] [[sc_diff]]) [which(rmultinom(1, 1, ACT [[off]] [[prog]] [[sc_diff]] * ACT.states [[off]] [, state]) == 1)]	#
+		#off_pl <- rownames(ACT[[off]])[which(rmultinom(1, 1, ACT[[off]][[state]]) == 1)]#
+		#off_pl <- rownames(ACT.2[[off]])[which(rmultinom(1, 1, ACT.2[[off]][[state]]) == 1)]#
+		# p1#
+		p<-'p1'#
+		# p_temp <- (OFF[[off]][[p]][off_pl, state] * HC[off, 'off']) ^ (DEF[[def]][p] * HC[def, 'def'])#
+		# p_temp <- (OFF[[off]][[p]][off_pl, state] ^ ifelse(off_pl == "Team", 1, DEF[[def]][1, p]))#
+		p_temp <- ( OFF[[off]][[ off_pl ]][p, state] * ifelse(off_pl == "Team", 1, DEF[[def]][1, p]) )#
+		y <- rbinom(1, 1, ifelse(p_temp > 1, 1, p_temp))#
+		if (y == 1) {#
+			p<-'p2'#
+			p_temp <- OFF[[off]][[off_pl]][p, state] * ifelse(off_pl == "Team", 1, DEF[[def]][1, p])#
+			y <- rbinom(1, 1, ifelse(p_temp > 1, 1, p_temp))#
+			if (y == 1) {#
+				p<-'p3'#
+				p_temp <- OFF[[off]][[off_pl]][p, state] * ifelse(off_pl == "Team", 1, DEF[[def]][1, p])#
+				y <- rbinom(1, 1, ifelse(p_temp > 1, 1, p_temp))#
+				if (y == 1) {#
+					p<-'p4'#
+					p_temp <- OFF[[off]][[off_pl]][p, state] * ifelse(off_pl == "Team", 1, DEF[[def]][1, p])#
+					y <- rbinom(1, 1, ifelse(p_temp > 1, 1, p_temp))#
+					if (y == 1) {#
+						p<-'p5'#
+						y <- rbinom(1, 1, OFF[[off]][[off_pl]][p, state])#
+						if (y == 1) {#
+							stats[[off]][off_pl, "PTS"] <- stats[[off]][off_pl, "PTS"] + 3#
+							stats[[off]][off_pl, c("FGM", "FGA", "FTM")] <- stats[[off]][off_pl, c("FGM", "FGA", "FTM")] + 1#
+							stats[[off]][off_pl, "ACT"] <- stats[[off]][off_pl, "ACT"] + 1#
+							if(off == "away") {#
+								off <- "home"#
+								ascore <- ascore + 3#
+							} else {#
+								off <- "away"#
+								hscore <- hscore + 3#
+							}#
+							state <- "S1"#
+							poss <- poss + 1#
+						} else {#
+							stats[[off]][off_pl, "PTS"] <- stats[[off]][off_pl, "PTS"] + 2#
+							stats[[off]][off_pl,c("FGM", "FGA")] <- stats[[off]][off_pl,c("FGM", "FGA")] + 1#
+							stats[[off]][off_pl, "ACT"] <- stats[[off]][off_pl, "ACT"] + 1#
+							if(off == "away") {#
+								ascore <- ascore + 2#
+							}#
+							else {#
+								hscore <- hscore + 2#
+							}#
+							reb_result <- reb_ft(off, def)#
+							off <- reb_result[1]#
+							state <- reb_result[2]#
+							reb_type <- reb_result[3]#
+							reb.stats [off, reb_type] <- reb.stats [off, reb_type] + 1#
+							#stats[[off]][reb_player,reb_type]<-stats[[off]][reb_player,reb_type]+1#
+							#stats[[off]][reb_player,'reb']<-stats[[off]][reb_player,'reb']+1#
+							poss <- poss + as.numeric(reb_result[4])#
+						}#
+					} else {#
+						stats[[off]][off_pl, "PTS"] <- stats[[off]][off_pl, "PTS"] + 2#
+						stats[[off]][off_pl, c("FGM", "FGA")] <- stats[[off]][off_pl, c("FGM", "FGA")] + 1#
+						stats[[off]][off_pl, "ACT"] <- stats[[off]][off_pl, "ACT"] + 1#
+						if(off == "away") {#
+							off <- "home"#
+							ascore <- ascore + 2#
+						} else {#
+							off <- "away"#
+							hscore <- hscore + 2#
+						}#
+						state <- "S1"#
+						poss <- poss + 1#
+					}#
+				} else {#
+					p <- 'p6'#
+					y <- rbinom(1, 1, OFF[[off]][[off_pl]][p, state])#
+					if (y==1){#
+						p<-'p5'#
+						y <- rbinom(1, 1, OFF[[off]][[off_pl]][p, state])#
+						if (y==1){#
+							stats[[off]][off_pl, "PTS"]<-stats[[off]][off_pl, "PTS"] + 4#
+							stats[[off]][off_pl, c("FGM", "FGA", "PT3", "FTM")]<-stats[[off]][off_pl,c("FGM", "FGA", "PT3", "FTM")] + 1#
+							stats[[off]][off_pl, "ACT"] <- stats[[off]][off_pl, "ACT"] + 1#
+							if(off == "away") {#
+								off <- "home"#
+								ascore <- ascore + 4#
+							} else {#
+								off <- "away"#
+								hscore <- hscore + 4#
+							}#
+							state <- "S1"#
+							poss <- poss + 1#
+						} else {#
+							stats[[off]][off_pl, "PTS"]<-stats[[off]][off_pl, "PTS"] + 3#
+							stats[[off]][off_pl, c("FGM", "FGA", "PT3")]<-stats[[off]][off_pl, c("FGM", "FGA", "PT3")] + 1#
+							stats[[off]][off_pl, "ACT"] <- stats[[off]][off_pl, "ACT"] + 1#
+							if(off == "away"){#
+								ascore <- ascore + 3#
+							} else {#
+								hscore <- hscore + 3#
+							}#
+							reb_result <- reb_ft(off, def)#
+							off <- reb_result[1]#
+							state <- reb_result[2]#
+							reb_type <- reb_result[3]#
+							reb.stats [off, reb_type] <- reb.stats [off, reb_type] + 1#
+							#stats[[off]][reb_player,reb_type]<-stats[[off]][reb_player,reb_type]+1#
+							#stats[[off]][reb_player,'reb']<-stats[[off]][reb_player,'reb']+1#
+							poss <- poss + as.numeric(reb_result[4])#
+						}#
+					} else {#
+						stats[[off]][off_pl, "PTS"]<-stats[[off]][off_pl, "PTS"] + 3#
+						stats[[off]][off_pl, c("FGM", "FGA", "PT3")]<-stats[[off]][off_pl, c("FGM", "FGA", "PT3")] + 1#
+						stats[[off]][off_pl, "ACT"] <- stats[[off]][off_pl, "ACT"] + 1#
+						if(off == "away") {#
+							off <- "home"#
+							ascore <- ascore + 3#
+						} else {#
+							off <- "away"#
+							hscore <- hscore + 3#
+						}#
+						state <- "S1"#
+						poss <- poss + 1#
+					}#
+				}#
+			} else {#
+				p<-'p17'#
+				#y <- rbinom(1, 1, ifelse(off_pl == 'Team', OFF[[off]] [['Team']] ['p17', state], TEAM[off, 'p17']) )#
+				y <- rbinom(1, 1, ifelse(off_pl == "Team", TEAM$tm[off, 'p17'], TEAM$pl[off, 'p17']))#
+				if (y==1){#
+					p<-'p18'#
+					#y <- rbinom(1, 1, ifelse(off_pl == 'Team', OFF[[off]][['Team']]['p18', state], TEAM[off, 'p18']) )#
+					y <- rbinom(1, 1, ifelse(off_pl == "Team", TEAM$tm[off, 'p18'], TEAM$pl[off, 'p18']))#
+					if (y==1){#
+						stats[[off]][off_pl, "PTS"] <- stats[[off]][off_pl, "PTS"] + 1#
+						stats[[off]][off_pl, "FTM"] <- stats[[off]][off_pl, "FTM"] + 1#
+						stats[[off]][off_pl, "ACT"] <- stats[[off]][off_pl, "ACT"] + 1#
+						if (off == "away") {#
+							ascore <- ascore + 1#
+						} else {#
+							hscore <- hscore + 1#
+						}#
+					} else {#
+						stats[[off]][off_pl, "PTS"] <- stats[[off]][off_pl, "PTS"] + 2#
+						stats[[off]][off_pl, "FTM"] <- stats[[off]][off_pl, "FTM"] + 2#
+						stats[[off]][off_pl, "ACT"] <- stats[[off]][off_pl, "ACT"] + 1#
+						if (off == "away") {#
+							ascore <- ascore + 2#
+						} else {#
+							hscore <- hscore + 2#
+						}#
+					}#
+					state = 'S1'#
+				} else {#
+					p <- 'p8'#
+					y <- rbinom(1, 1, OFF[[off]][[off_pl]][p, state])#
+					if (y==1){#
+						p <- 'p5'#
+						y <- rbinom(1, 1, OFF[[off]][[off_pl]][p, state])#
+						stats[[off]][off_pl, "PTS"] <- stats[[off]][off_pl, "PTS"] + 1#
+						stats[[off]][off_pl, "FTM"] <- stats[[off]][off_pl, "FTM"] + 1#
+						stats[[off]][off_pl, "ACT"] <- stats[[off]][off_pl, "ACT"] + 1#
+						if (y == 1){#
+							if(off == "away") {#
+								off<-"home"#
+								ascore <- ascore + 1#
+							} else {#
+								off <- "away"#
+								hscore <- hscore + 1#
+							}#
+							state <- "S1"#
+							poss <- poss + 1#
+						} else {#
+							if(off == "away"){#
+								ascore <- ascore + 1#
+							} else {#
+								hscore <- hscore + 1#
+							}#
+							reb_result <- reb_ft(off, def)#
+							off <- reb_result[1]#
+							state <- reb_result[2]#
+							reb_type <- reb_result[3]#
+							reb.stats [off, reb_type] <- reb.stats [off, reb_type] + 1#
+							#stats[[off]][reb_player,reb_type] <- stats[[off]][reb_player,reb_type]+1#
+							#stats[[off]][reb_player,'reb'] <- stats[[off]][reb_player,'reb']+1#
+							poss <- poss + as.numeric(reb_result[4])#
+						}#
+					} else {#
+						p <- 'p10'#
+						y <- rbinom(1, 1, OFF[[off]][[off_pl]][p, state])#
+						if (y == 1){#
+							p <- 'p5'#
+							y <- rbinom(1, 1, OFF[[off]][[off_pl]][p, state])#
+							stats[[off]][off_pl, "PTS"] <- stats[[off]][off_pl, "PTS"] + 2#
+							stats[[off]][off_pl, "FTM"] <- stats[[off]][off_pl, "FTM"] + 2#
+							stats[[off]][off_pl, "ACT"] <- stats[[off]][off_pl, "ACT"] + 1#
+							if (y == 1){#
+								if(off == "away") {#
+									off <- "home"#
+									ascore <- ascore + 2#
+								} else {#
+									off <- "away"#
+									hscore <- hscore + 2#
+								}#
+								state <- "S1"#
+								poss <- poss + 1#
+							} else {#
+								if(off == "away") {#
+									ascore <- ascore + 2#
+								} else {#
+									hscore <- hscore + 2#
+								}#
+								reb_result <- reb_ft(off, def)#
+								off <- reb_result[1]#
+								state <- reb_result[2]#
+								reb_type <- reb_result[3]#
+								reb.stats [off, reb_type] <- reb.stats [off, reb_type] + 1#
+								#stats[[off]][reb_player,reb_type]<-stats[[off]][reb_player,reb_type]+1#
+								#stats[[off]][reb_player,'reb']<-stats[[off]][reb_player,'reb']+1#
+								poss <- poss + as.numeric(reb_result[4])#
+							}#
+						} else {#
+							stats[[off]][off_pl, "PTS"] <- stats[[off]][off_pl, "PTS"] + 3#
+							stats[[off]][off_pl, "FTM"] <- stats[[off]][off_pl, "FTM"] + 3#
+							stats[[off]][off_pl, "ACT"] <- stats[[off]][off_pl, "ACT"] + 1#
+							if(off == "away") {#
+								ascore <- ascore + 3#
+							} else {#
+								hscore <- hscore + 3#
+							}#
+							state <- "S1"#
+							poss <- poss + 1#
+						}#
+					}#
+				}#
+			}#
+		} else {#
+			p<-'p12'#
+			p_temp <- OFF[[off]][[off_pl]][p, state] * ifelse(off_pl == "Team", 1, DEF[[def]][1, p])#
+			y <- rbinom(1, 1, ifelse(p_temp > 1, 1, p_temp))#
+			if (y==1){#
+				stats[[off]][off_pl, "FGA"] <- stats[[off]][off_pl, "FGA"] + 1#
+				stats[[off]][off_pl, "ACT"] <- stats[[off]][off_pl, "ACT"] + 1#
+				reb_result <- reb_fg(off, def)#
+				off <- reb_result[1]#
+				state <- reb_result[2]#
+				reb_type <- reb_result[3]#
+				reb.stats [off, reb_type] <- reb.stats [off, reb_type] + 1#
+				#stats[[off]][reb_player,reb_type]<-stats[[off]][reb_player,reb_type]+1#
+				#stats[[off]][reb_player,'reb']<-stats[[off]][reb_player,'reb']+1#
+				poss <- poss + as.numeric(reb_result[4])#
+			} else {#
+				p <- 'p13'#
+				y <- rbinom(1, 1, OFF[[off]][[off_pl]][p, state])#
+				if (y==1){#
+					reb_result <- reb_ft(off, def)#
+					off <- reb_result[1]#
+					state <- reb_result[2]#
+					reb_type <- reb_result[3]#
+					reb.stats [off, reb_type] <- reb.stats [off, reb_type] + 1#
+					#stats[[off]][reb_player,reb_type]<-stats[[off]][reb_player,reb_type]+1#
+					#stats[[off]][reb_player,'reb']<-stats[[off]][reb_player,'reb']+1#
+					poss <- poss + as.numeric(reb_result[4])#
+				} else {#
+					p <- 'p14'#
+					p_temp <- OFF[[off]][[off_pl]][p, state] * ifelse(off_pl == "Team", 1, DEF[[def]][1, p])#
+					y <- rbinom(1, 1, ifelse(p_temp > 1, 1, p_temp))#
+					if (y == 1){#
+						p<-'p15'#
+						p_temp <- OFF[[off]][[off_pl]][p, state] * ifelse(off_pl == "Team", 1, DEF[[def]][1, p])#
+						y <- rbinom(1, 1, ifelse(p_temp > 1, 1, p_temp))#
+						stats[[off]][off_pl, "TO"] <- stats[[off]][off_pl, "TO"] + 1#
+						stats[[off]][off_pl, "ACT"] <- stats[[off]][off_pl, "ACT"] + 1#
+						poss <- poss + 1#
+						if (off == "away"){#
+							off <- "home"#
+						} else {#
+							off <- "away"#
+						}#
+						if (y == 1){#
+							state <- "S1"#
+						} else {#
+							state <- "S3"#
+						}#
+					} else {#
+						state <-"S1"#
+					}#
+				}#
+			}#
+		}#
+	}#
+	diff <- ascore - hscore#
+	if (round(ascore - hscore) < 0) {#
+		win <- 1#
+	} else {#
+		win <- 0#
+	}#
+#
+	return (list(#
+		diff = diff,#
+		ascore = ascore,#
+		hscore = hscore,#
+		win = win,#
+		stats = stats#
+	))#
+#
+	# print (Sys.time() - start)#
+}
+temp [['a']] <- simRun('20150415ATLCHI', 'test')$stats$home
+RESULTS CONTAINER#
+	stats <- list(#
+		away = data.frame(#
+			#player = rownames(ACT$away),#
+			FGM = 0,#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(ACT$away)#
+		),#
+		home = data.frame(#
+			#player = rownames(ACT$home),#
+			FGM = 0,#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(ACT$home)#
+		)#
+	)
+away = data.frame(#
+			#player = rownames(ACT$away),#
+			FGM = 0,#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(ACT$away)#
+		)
+ACT$away
+each iteration is approx .25 seconds#
+	# 5000 reiterations cost about 20 minutes#
+	#start <- Sys.time()#
+#
+	R_file <- paste(dir_data, 'rdata/', today, '/games/', gameid, '/', file_name, '.Rda', sep="")#
+	load(R_file)#
+	list2env( gameData, globalenv() )#
+#
+	reb_ft <- function(off_in, def_in) {#
+		reb_p_o <- ifelse(is.na(REB[[off_in]]['ft.o']), 0, REB[[off_in]]['ft.o'])#
+		reb_p_d <- REB[[def_in]]['ft.d']#
+		#y <- rbinom(1, 1, reb_p_o)#
+		y <- 2 - which(rmultinom(1, 1, c(reb_p_o, reb_p_d)) == 1)#
+		# 0 means oreb#
+		# 1 means dreb#
+		if (y == 1) {#
+			poss_add <- 0#
+			type <- "FT.oreb"#
+			state <- "S4"#
+			off_out <- off_in#
+		} else {#
+			poss_add <- 1#
+			state <- "S1"#
+			type <- "FT.dreb"#
+			if(off_in == "away") {#
+				off_out <- "home"#
+			} else {#
+				off_out <- "away"#
+			}#
+		}#
+		return(c(off_out, state, type, poss_add))#
+	}#
+	reb_fg <- function(off_in, def_in) {#
+		reb_p_o <- REB[[off_in]]['fg.o']#
+		reb_p_d <- REB[[def_in]]['fg.d']#
+		# 0 means oreb#
+		# 1 means dreb#
+		# y <- rbinom(1, 1, reb_p_o - reb_p_d)#
+		y <- 2 - which(rmultinom(1, 1, c(reb_p_o, reb_p_d)) == 1)#
+		if (y == 1) {#
+			poss_add <- 0#
+			type <- "FG.oreb"#
+			state <- "S4"#
+			off_out <- off_in#
+		} else {#
+			poss_add <- 1#
+			state <- "S2"#
+			type <- "FG.dreb"#
+			if(off_in == "away") {#
+				off_out <- "home"#
+			} else {#
+				off_out <- "away"#
+			}#
+		}#
+		return(c(off_out, state, type, poss_add))#
+	}
+away = data.frame(#
+			#player = rownames(ACT$away),#
+			FGM = 0,#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(ACT$away)#
+		)
+data.frame(#
+			#player = rownames(ACT$away),#
+			FGM = 0,#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(ACT$away)#
+		)
+data.frame(#
+			FGM = 0,#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(ACT$away)#
+		)
+data.frame(#
+			FGM = 0,#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0#
+		)
+RESULTS CONTAINER#
+	stats <- list(#
+		away = data.frame(#
+			FGM = rep(0, nrow(ACT$away),#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(ACT$away)#
+		),#
+		home = data.frame(#
+			#player = rownames(ACT$home),#
+			FGM = rep(0, nrow(ACT$home),#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(ACT$home)#
+		)#
+	)
+)
+nrow(ACT$away)
+away = data.frame(#
+			FGM = rep(0, nrow(ACT$away),#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(ACT$away)#
+		)
+away <- data.frame(#
+			FGM = rep(0, nrow(ACT$away),#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(ACT$away)#
+		)
+)
+away
+data.frame(#
+			FGM = rep(0, nrow(ACT$away))
+)
+away = data.frame(#
+			FGM = rep(0, nrow(ACT$away),#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(ACT$away)#
+		)
+)
+away
+rep(0, nrow(ACT$away)
+)
+stats <- list(#
+		away = data.frame(#
+			FGM = rep(0, nrow(ACT$away)),#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(ACT$away)#
+		),#
+		home = data.frame(#
+			#player = rownames(ACT$home),#
+			FGM = rep(0, nrow(ACT$home)),#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(ACT$home)#
+		)#
+	)
+stats
+simRun <- function(gameid = "", file_name = "", today = "live") {#
+#
+	# each iteration is approx .25 seconds#
+	# 5000 reiterations cost about 20 minutes#
+	#start <- Sys.time()#
+#
+	R_file <- paste(dir_data, 'rdata/', today, '/games/', gameid, '/', file_name, '.Rda', sep="")#
+	load(R_file)#
+	list2env( gameData, globalenv() )#
+#
+	reb_ft <- function(off_in, def_in) {#
+		reb_p_o <- ifelse(is.na(REB[[off_in]]['ft.o']), 0, REB[[off_in]]['ft.o'])#
+		reb_p_d <- REB[[def_in]]['ft.d']#
+		#y <- rbinom(1, 1, reb_p_o)#
+		y <- 2 - which(rmultinom(1, 1, c(reb_p_o, reb_p_d)) == 1)#
+		# 0 means oreb#
+		# 1 means dreb#
+		if (y == 1) {#
+			poss_add <- 0#
+			type <- "FT.oreb"#
+			state <- "S4"#
+			off_out <- off_in#
+		} else {#
+			poss_add <- 1#
+			state <- "S1"#
+			type <- "FT.dreb"#
+			if(off_in == "away") {#
+				off_out <- "home"#
+			} else {#
+				off_out <- "away"#
+			}#
+		}#
+		return(c(off_out, state, type, poss_add))#
+	}#
+	reb_fg <- function(off_in, def_in) {#
+		reb_p_o <- REB[[off_in]]['fg.o']#
+		reb_p_d <- REB[[def_in]]['fg.d']#
+		# 0 means oreb#
+		# 1 means dreb#
+		# y <- rbinom(1, 1, reb_p_o - reb_p_d)#
+		y <- 2 - which(rmultinom(1, 1, c(reb_p_o, reb_p_d)) == 1)#
+		if (y == 1) {#
+			poss_add <- 0#
+			type <- "FG.oreb"#
+			state <- "S4"#
+			off_out <- off_in#
+		} else {#
+			poss_add <- 1#
+			state <- "S2"#
+			type <- "FG.dreb"#
+			if(off_in == "away") {#
+				off_out <- "home"#
+			} else {#
+				off_out <- "away"#
+			}#
+		}#
+		return(c(off_out, state, type, poss_add))#
+	}#
+#
+	# RESULTS CONTAINER#
+	stats <- list(#
+		away = data.frame(#
+			FGM = rep(0, nrow(ACT$away)),#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(ACT$away)#
+		),#
+		home = data.frame(#
+			#player = rownames(ACT$home),#
+			FGM = rep(0, nrow(ACT$home)),#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(ACT$home)#
+		)#
+	)#
+#
+	reb.stats <- data.frame(#
+		FG.oreb = rep(0, 2),#
+		FG.dreb = rep(0, 2),#
+		FT.oreb = rep(0, 2),#
+		FT.dreb = rep(0, 2),#
+		row.names=c('away', 'home')#
+	)#
+#
+	poss.tot <- 0#
+	dat_replay <- list()#
+	box_replay <- list()#
+#
+	off <- sample( c("away", "home"), size = 1, prob = c(1, 1))#
+	state <- "S1"#
+	poss <- 1#
+	ascore <- 0#
+	hscore <- 0#
+	while (poss < poss.n) {#
+		poss.tot <- poss.tot + 1#
+		prog <- as.character(ceiling(poss / poss.n * 48))#
+		sc_diff <- if (abs(ascore - hscore) > 15) {'runaway'} else if (abs(ascore - hscore) > 7) {'notclose'} else {'close'}#
+		if (off == "away") {#
+			def <- 'home'		#
+		} else {#
+			def <- 'away'#
+		}#
+		off_pl <- rownames(ACT [[off]] ) [which(rmultinom(1, 1, ACT [[off]] [, state]) == 1)]	#
+		#off_pl <- names(ACT [[off]] [[prog]] [[sc_diff]]) [which(rmultinom(1, 1, ACT [[off]] [[prog]] [[sc_diff]] * ACT.states [[off]] [, state]) == 1)]	#
+		#off_pl <- rownames(ACT[[off]])[which(rmultinom(1, 1, ACT[[off]][[state]]) == 1)]#
+		#off_pl <- rownames(ACT.2[[off]])[which(rmultinom(1, 1, ACT.2[[off]][[state]]) == 1)]#
+		# p1#
+		p<-'p1'#
+		# p_temp <- (OFF[[off]][[p]][off_pl, state] * HC[off, 'off']) ^ (DEF[[def]][p] * HC[def, 'def'])#
+		# p_temp <- (OFF[[off]][[p]][off_pl, state] ^ ifelse(off_pl == "Team", 1, DEF[[def]][1, p]))#
+		p_temp <- ( OFF[[off]][[ off_pl ]][p, state] * ifelse(off_pl == "Team", 1, DEF[[def]][1, p]) )#
+		y <- rbinom(1, 1, ifelse(p_temp > 1, 1, p_temp))#
+		if (y == 1) {#
+			p<-'p2'#
+			p_temp <- OFF[[off]][[off_pl]][p, state] * ifelse(off_pl == "Team", 1, DEF[[def]][1, p])#
+			y <- rbinom(1, 1, ifelse(p_temp > 1, 1, p_temp))#
+			if (y == 1) {#
+				p<-'p3'#
+				p_temp <- OFF[[off]][[off_pl]][p, state] * ifelse(off_pl == "Team", 1, DEF[[def]][1, p])#
+				y <- rbinom(1, 1, ifelse(p_temp > 1, 1, p_temp))#
+				if (y == 1) {#
+					p<-'p4'#
+					p_temp <- OFF[[off]][[off_pl]][p, state] * ifelse(off_pl == "Team", 1, DEF[[def]][1, p])#
+					y <- rbinom(1, 1, ifelse(p_temp > 1, 1, p_temp))#
+					if (y == 1) {#
+						p<-'p5'#
+						y <- rbinom(1, 1, OFF[[off]][[off_pl]][p, state])#
+						if (y == 1) {#
+							stats[[off]][off_pl, "PTS"] <- stats[[off]][off_pl, "PTS"] + 3#
+							stats[[off]][off_pl, c("FGM", "FGA", "FTM")] <- stats[[off]][off_pl, c("FGM", "FGA", "FTM")] + 1#
+							stats[[off]][off_pl, "ACT"] <- stats[[off]][off_pl, "ACT"] + 1#
+							if(off == "away") {#
+								off <- "home"#
+								ascore <- ascore + 3#
+							} else {#
+								off <- "away"#
+								hscore <- hscore + 3#
+							}#
+							state <- "S1"#
+							poss <- poss + 1#
+						} else {#
+							stats[[off]][off_pl, "PTS"] <- stats[[off]][off_pl, "PTS"] + 2#
+							stats[[off]][off_pl,c("FGM", "FGA")] <- stats[[off]][off_pl,c("FGM", "FGA")] + 1#
+							stats[[off]][off_pl, "ACT"] <- stats[[off]][off_pl, "ACT"] + 1#
+							if(off == "away") {#
+								ascore <- ascore + 2#
+							}#
+							else {#
+								hscore <- hscore + 2#
+							}#
+							reb_result <- reb_ft(off, def)#
+							off <- reb_result[1]#
+							state <- reb_result[2]#
+							reb_type <- reb_result[3]#
+							reb.stats [off, reb_type] <- reb.stats [off, reb_type] + 1#
+							#stats[[off]][reb_player,reb_type]<-stats[[off]][reb_player,reb_type]+1#
+							#stats[[off]][reb_player,'reb']<-stats[[off]][reb_player,'reb']+1#
+							poss <- poss + as.numeric(reb_result[4])#
+						}#
+					} else {#
+						stats[[off]][off_pl, "PTS"] <- stats[[off]][off_pl, "PTS"] + 2#
+						stats[[off]][off_pl, c("FGM", "FGA")] <- stats[[off]][off_pl, c("FGM", "FGA")] + 1#
+						stats[[off]][off_pl, "ACT"] <- stats[[off]][off_pl, "ACT"] + 1#
+						if(off == "away") {#
+							off <- "home"#
+							ascore <- ascore + 2#
+						} else {#
+							off <- "away"#
+							hscore <- hscore + 2#
+						}#
+						state <- "S1"#
+						poss <- poss + 1#
+					}#
+				} else {#
+					p <- 'p6'#
+					y <- rbinom(1, 1, OFF[[off]][[off_pl]][p, state])#
+					if (y==1){#
+						p<-'p5'#
+						y <- rbinom(1, 1, OFF[[off]][[off_pl]][p, state])#
+						if (y==1){#
+							stats[[off]][off_pl, "PTS"]<-stats[[off]][off_pl, "PTS"] + 4#
+							stats[[off]][off_pl, c("FGM", "FGA", "PT3", "FTM")]<-stats[[off]][off_pl,c("FGM", "FGA", "PT3", "FTM")] + 1#
+							stats[[off]][off_pl, "ACT"] <- stats[[off]][off_pl, "ACT"] + 1#
+							if(off == "away") {#
+								off <- "home"#
+								ascore <- ascore + 4#
+							} else {#
+								off <- "away"#
+								hscore <- hscore + 4#
+							}#
+							state <- "S1"#
+							poss <- poss + 1#
+						} else {#
+							stats[[off]][off_pl, "PTS"]<-stats[[off]][off_pl, "PTS"] + 3#
+							stats[[off]][off_pl, c("FGM", "FGA", "PT3")]<-stats[[off]][off_pl, c("FGM", "FGA", "PT3")] + 1#
+							stats[[off]][off_pl, "ACT"] <- stats[[off]][off_pl, "ACT"] + 1#
+							if(off == "away"){#
+								ascore <- ascore + 3#
+							} else {#
+								hscore <- hscore + 3#
+							}#
+							reb_result <- reb_ft(off, def)#
+							off <- reb_result[1]#
+							state <- reb_result[2]#
+							reb_type <- reb_result[3]#
+							reb.stats [off, reb_type] <- reb.stats [off, reb_type] + 1#
+							#stats[[off]][reb_player,reb_type]<-stats[[off]][reb_player,reb_type]+1#
+							#stats[[off]][reb_player,'reb']<-stats[[off]][reb_player,'reb']+1#
+							poss <- poss + as.numeric(reb_result[4])#
+						}#
+					} else {#
+						stats[[off]][off_pl, "PTS"]<-stats[[off]][off_pl, "PTS"] + 3#
+						stats[[off]][off_pl, c("FGM", "FGA", "PT3")]<-stats[[off]][off_pl, c("FGM", "FGA", "PT3")] + 1#
+						stats[[off]][off_pl, "ACT"] <- stats[[off]][off_pl, "ACT"] + 1#
+						if(off == "away") {#
+							off <- "home"#
+							ascore <- ascore + 3#
+						} else {#
+							off <- "away"#
+							hscore <- hscore + 3#
+						}#
+						state <- "S1"#
+						poss <- poss + 1#
+					}#
+				}#
+			} else {#
+				p<-'p17'#
+				#y <- rbinom(1, 1, ifelse(off_pl == 'Team', OFF[[off]] [['Team']] ['p17', state], TEAM[off, 'p17']) )#
+				y <- rbinom(1, 1, ifelse(off_pl == "Team", TEAM$tm[off, 'p17'], TEAM$pl[off, 'p17']))#
+				if (y==1){#
+					p<-'p18'#
+					#y <- rbinom(1, 1, ifelse(off_pl == 'Team', OFF[[off]][['Team']]['p18', state], TEAM[off, 'p18']) )#
+					y <- rbinom(1, 1, ifelse(off_pl == "Team", TEAM$tm[off, 'p18'], TEAM$pl[off, 'p18']))#
+					if (y==1){#
+						stats[[off]][off_pl, "PTS"] <- stats[[off]][off_pl, "PTS"] + 1#
+						stats[[off]][off_pl, "FTM"] <- stats[[off]][off_pl, "FTM"] + 1#
+						stats[[off]][off_pl, "ACT"] <- stats[[off]][off_pl, "ACT"] + 1#
+						if (off == "away") {#
+							ascore <- ascore + 1#
+						} else {#
+							hscore <- hscore + 1#
+						}#
+					} else {#
+						stats[[off]][off_pl, "PTS"] <- stats[[off]][off_pl, "PTS"] + 2#
+						stats[[off]][off_pl, "FTM"] <- stats[[off]][off_pl, "FTM"] + 2#
+						stats[[off]][off_pl, "ACT"] <- stats[[off]][off_pl, "ACT"] + 1#
+						if (off == "away") {#
+							ascore <- ascore + 2#
+						} else {#
+							hscore <- hscore + 2#
+						}#
+					}#
+					state = 'S1'#
+				} else {#
+					p <- 'p8'#
+					y <- rbinom(1, 1, OFF[[off]][[off_pl]][p, state])#
+					if (y==1){#
+						p <- 'p5'#
+						y <- rbinom(1, 1, OFF[[off]][[off_pl]][p, state])#
+						stats[[off]][off_pl, "PTS"] <- stats[[off]][off_pl, "PTS"] + 1#
+						stats[[off]][off_pl, "FTM"] <- stats[[off]][off_pl, "FTM"] + 1#
+						stats[[off]][off_pl, "ACT"] <- stats[[off]][off_pl, "ACT"] + 1#
+						if (y == 1){#
+							if(off == "away") {#
+								off<-"home"#
+								ascore <- ascore + 1#
+							} else {#
+								off <- "away"#
+								hscore <- hscore + 1#
+							}#
+							state <- "S1"#
+							poss <- poss + 1#
+						} else {#
+							if(off == "away"){#
+								ascore <- ascore + 1#
+							} else {#
+								hscore <- hscore + 1#
+							}#
+							reb_result <- reb_ft(off, def)#
+							off <- reb_result[1]#
+							state <- reb_result[2]#
+							reb_type <- reb_result[3]#
+							reb.stats [off, reb_type] <- reb.stats [off, reb_type] + 1#
+							#stats[[off]][reb_player,reb_type] <- stats[[off]][reb_player,reb_type]+1#
+							#stats[[off]][reb_player,'reb'] <- stats[[off]][reb_player,'reb']+1#
+							poss <- poss + as.numeric(reb_result[4])#
+						}#
+					} else {#
+						p <- 'p10'#
+						y <- rbinom(1, 1, OFF[[off]][[off_pl]][p, state])#
+						if (y == 1){#
+							p <- 'p5'#
+							y <- rbinom(1, 1, OFF[[off]][[off_pl]][p, state])#
+							stats[[off]][off_pl, "PTS"] <- stats[[off]][off_pl, "PTS"] + 2#
+							stats[[off]][off_pl, "FTM"] <- stats[[off]][off_pl, "FTM"] + 2#
+							stats[[off]][off_pl, "ACT"] <- stats[[off]][off_pl, "ACT"] + 1#
+							if (y == 1){#
+								if(off == "away") {#
+									off <- "home"#
+									ascore <- ascore + 2#
+								} else {#
+									off <- "away"#
+									hscore <- hscore + 2#
+								}#
+								state <- "S1"#
+								poss <- poss + 1#
+							} else {#
+								if(off == "away") {#
+									ascore <- ascore + 2#
+								} else {#
+									hscore <- hscore + 2#
+								}#
+								reb_result <- reb_ft(off, def)#
+								off <- reb_result[1]#
+								state <- reb_result[2]#
+								reb_type <- reb_result[3]#
+								reb.stats [off, reb_type] <- reb.stats [off, reb_type] + 1#
+								#stats[[off]][reb_player,reb_type]<-stats[[off]][reb_player,reb_type]+1#
+								#stats[[off]][reb_player,'reb']<-stats[[off]][reb_player,'reb']+1#
+								poss <- poss + as.numeric(reb_result[4])#
+							}#
+						} else {#
+							stats[[off]][off_pl, "PTS"] <- stats[[off]][off_pl, "PTS"] + 3#
+							stats[[off]][off_pl, "FTM"] <- stats[[off]][off_pl, "FTM"] + 3#
+							stats[[off]][off_pl, "ACT"] <- stats[[off]][off_pl, "ACT"] + 1#
+							if(off == "away") {#
+								ascore <- ascore + 3#
+							} else {#
+								hscore <- hscore + 3#
+							}#
+							state <- "S1"#
+							poss <- poss + 1#
+						}#
+					}#
+				}#
+			}#
+		} else {#
+			p<-'p12'#
+			p_temp <- OFF[[off]][[off_pl]][p, state] * ifelse(off_pl == "Team", 1, DEF[[def]][1, p])#
+			y <- rbinom(1, 1, ifelse(p_temp > 1, 1, p_temp))#
+			if (y==1){#
+				stats[[off]][off_pl, "FGA"] <- stats[[off]][off_pl, "FGA"] + 1#
+				stats[[off]][off_pl, "ACT"] <- stats[[off]][off_pl, "ACT"] + 1#
+				reb_result <- reb_fg(off, def)#
+				off <- reb_result[1]#
+				state <- reb_result[2]#
+				reb_type <- reb_result[3]#
+				reb.stats [off, reb_type] <- reb.stats [off, reb_type] + 1#
+				#stats[[off]][reb_player,reb_type]<-stats[[off]][reb_player,reb_type]+1#
+				#stats[[off]][reb_player,'reb']<-stats[[off]][reb_player,'reb']+1#
+				poss <- poss + as.numeric(reb_result[4])#
+			} else {#
+				p <- 'p13'#
+				y <- rbinom(1, 1, OFF[[off]][[off_pl]][p, state])#
+				if (y==1){#
+					reb_result <- reb_ft(off, def)#
+					off <- reb_result[1]#
+					state <- reb_result[2]#
+					reb_type <- reb_result[3]#
+					reb.stats [off, reb_type] <- reb.stats [off, reb_type] + 1#
+					#stats[[off]][reb_player,reb_type]<-stats[[off]][reb_player,reb_type]+1#
+					#stats[[off]][reb_player,'reb']<-stats[[off]][reb_player,'reb']+1#
+					poss <- poss + as.numeric(reb_result[4])#
+				} else {#
+					p <- 'p14'#
+					p_temp <- OFF[[off]][[off_pl]][p, state] * ifelse(off_pl == "Team", 1, DEF[[def]][1, p])#
+					y <- rbinom(1, 1, ifelse(p_temp > 1, 1, p_temp))#
+					if (y == 1){#
+						p<-'p15'#
+						p_temp <- OFF[[off]][[off_pl]][p, state] * ifelse(off_pl == "Team", 1, DEF[[def]][1, p])#
+						y <- rbinom(1, 1, ifelse(p_temp > 1, 1, p_temp))#
+						stats[[off]][off_pl, "TO"] <- stats[[off]][off_pl, "TO"] + 1#
+						stats[[off]][off_pl, "ACT"] <- stats[[off]][off_pl, "ACT"] + 1#
+						poss <- poss + 1#
+						if (off == "away"){#
+							off <- "home"#
+						} else {#
+							off <- "away"#
+						}#
+						if (y == 1){#
+							state <- "S1"#
+						} else {#
+							state <- "S3"#
+						}#
+					} else {#
+						state <-"S1"#
+					}#
+				}#
+			}#
+		}#
+	}#
+	diff <- ascore - hscore#
+	if (round(ascore - hscore) < 0) {#
+		win <- 1#
+	} else {#
+		win <- 0#
+	}#
+#
+	return (list(#
+		diff = diff,#
+		ascore = ascore,#
+		hscore = hscore,#
+		win = win,#
+		stats = stats#
+	))#
+#
+	# print (Sys.time() - start)#
+}
+temp[['a']] <- sumRun('20150415ATLCHI', 'test')
+temp[['a']] <- simRun('20150415ATLCHI', 'test')
+temp[['b']] <- simRun('20150415ATLCHI', 'test')
+temp[['c']] <- simRun('20150415ATLCHI', 'test')
+temp
+temp[['c']] <- simRun('20150415ATLCHI', 'test')$stats$away
+temp[['b']] <- simRun('20150415ATLCHI', 'test')$stats$away
+temp[['a']] <- simRun('20150415ATLCHI', 'test')$stats$away
+temp
+all.dat <- temp
+all.matrix <- abind(all.dat, along=3)#
+apply(all.matrix, c(1,2), mean)
+all.matrix <- abind(all.dat, along=3)#
+round(apply(all.matrix, c(1,2), mean), 2)
+all.matrix <- abind(all.dat, along=3)#
+round(apply(all.matrix, c(1,2), mean), 0)
+for (i in seq(50)) {temp[[i]] <- simRun('20150415ATLCHI', 'test')}
+names(tep)
+names(temp)
+temp<-list()
+for (i in seq(50)) {temp[[i]] <- simRun('20150415ATLCHI', 'test')$stats$away}
+temp
+all.dat <- temp
+all.matrix <- abind(all.dat, along=3)#
+apply(all.matrix, c(1,2), mean)
+all.matrix <- abind(all.dat, along=3)#
+round(apply(all.matrix, c(1,2), mean))
+ACT
+ACT$home
+ACT$home$ynow
+ACT$home$ynow*48
+ACT$home$xnow*48
+round(ACT$home$xnow*48)
+sum(ACT$home$xnow*48)
+awayInf
+awayInfo
+gameid<-'20150415ATLCHI'
+gameid
+file_name<-'test'
+notes
+today<-'live'
+out
+out<-TRUE
+out
+today
+home.team
+mydb = dbConnect(#
+    MySQL(),#
+    user = SQL_user,#
+    password = SQL_pw,#
+    dbname = SQL_db,#
+    host = SQL_host#
+  )#
+  SQL <- dbSendQuery( mydb,#
+  	paste('select * from schedule where gameid = "', gameid, '";', sep="")#
+ 	)#
+#
+ 	game.in <- fetch(SQL)#
+ 	game.today <- game.in[1, 'date']#
+ 	away.team <- game.in[1, 'away']#
+ 	home.team <- game.in[1, 'home']#
+ 	# currently using static csv file, change to database when possible#
+ 	# *******#
+	sch_poss <- read.csv(paste(dir_data, "schedule.csv", sep=""), header<-T)#
+	sch_poss[, "date"] <- as.Date(as.character(sch_poss[, "date"]))#
+	sch <- sch_poss#
+	away_no <- max(#
+		max(as.numeric(#
+			subset(sch,away==away.team)[,"away_cnt"]#
+		)),#
+		max(as.numeric(#
+			subset(sch,home==away.team)[,"home_cnt"]#
+		))#
+	)#
+	home_no <- max(#
+		max(as.numeric(#
+			subset(sch,away==home.team)[,"away_cnt"]#
+		)),#
+		max(as.numeric(#
+			subset(sch,home==home.team)[,"home_cnt"]#
+		))#
+	)#
+	game_cnt <- 10#
+	away_sch <- subset(sch,(away==away.team&away_cnt<away_no&away_cnt>=away_no-game_cnt)|(home==away.team&home_cnt<away_no&home_cnt>=away_no-game_cnt))[,"gameid"]#
+	home_sch <- subset(sch,(away==home.team&away_cnt<home_no&away_cnt>=home_no-game_cnt)|(home==home.team&home_cnt<home_no&home_cnt>=home_no-game_cnt))[,"gameid"]#
+	# pace or number of posessions#
+	poss.n <- round(mean(subset(sch, gameid %in% away_sch|gameid %in% home_sch)[, "poss"]))#
+	# *******#
+#
+	R_file <- paste(dir_data, 'rdata/', today, '/teams/', away.team, '.Rda', sep="")#
+  load(R_file)#
+  awayInfo <- teamInfo#
+#
+  R_file <- paste(dir_data, 'rdata/', today, '/teams/', home.team, '.Rda', sep="")#
+  load(R_file)#
+  homeInfo <- teamInfo
+library(RMySQL)
+mydb = dbConnect(#
+    MySQL(),#
+    user = SQL_user,#
+    password = SQL_pw,#
+    dbname = SQL_db,#
+    host = SQL_host#
+  )#
+  SQL <- dbSendQuery( mydb,#
+  	paste('select * from schedule where gameid = "', gameid, '";', sep="")#
+ 	)#
+#
+ 	game.in <- fetch(SQL)#
+ 	game.today <- game.in[1, 'date']#
+ 	away.team <- game.in[1, 'away']#
+ 	home.team <- game.in[1, 'home']#
+ 	# currently using static csv file, change to database when possible#
+ 	# *******#
+	sch_poss <- read.csv(paste(dir_data, "schedule.csv", sep=""), header<-T)#
+	sch_poss[, "date"] <- as.Date(as.character(sch_poss[, "date"]))#
+	sch <- sch_poss#
+	away_no <- max(#
+		max(as.numeric(#
+			subset(sch,away==away.team)[,"away_cnt"]#
+		)),#
+		max(as.numeric(#
+			subset(sch,home==away.team)[,"home_cnt"]#
+		))#
+	)#
+	home_no <- max(#
+		max(as.numeric(#
+			subset(sch,away==home.team)[,"away_cnt"]#
+		)),#
+		max(as.numeric(#
+			subset(sch,home==home.team)[,"home_cnt"]#
+		))#
+	)#
+	game_cnt <- 10#
+	away_sch <- subset(sch,(away==away.team&away_cnt<away_no&away_cnt>=away_no-game_cnt)|(home==away.team&home_cnt<away_no&home_cnt>=away_no-game_cnt))[,"gameid"]#
+	home_sch <- subset(sch,(away==home.team&away_cnt<home_no&away_cnt>=home_no-game_cnt)|(home==home.team&home_cnt<home_no&home_cnt>=home_no-game_cnt))[,"gameid"]#
+	# pace or number of posessions#
+	poss.n <- round(mean(subset(sch, gameid %in% away_sch|gameid %in% home_sch)[, "poss"]))#
+	# *******#
+#
+	R_file <- paste(dir_data, 'rdata/', today, '/teams/', away.team, '.Rda', sep="")#
+  load(R_file)#
+  awayInfo <- teamInfo#
+#
+  R_file <- paste(dir_data, 'rdata/', today, '/teams/', home.team, '.Rda', sep="")#
+  load(R_file)#
+  homeInfo <- teamInfo
+awayInfo
+awayInfo$act
+names(awayInfo$act)
+names(awayInfo$lineup)
+names(awayInfo$lineup$current)
+awayInfo$lineup$current
+homeInfo$lineup$current
+xy.forecast
+awayInfo$lineup$current$player
+data.frame(#
+  	player = awayInfo$lineup$current$player,#
+  	tierPT = awayInfo$lineup$current$tierPt,#
+  	position = awayInfo$lineup$current$position#
+  	)
+awayInfo$lineup$current$player
+awayInfo$lineup$current$tierPT
+awayInfo$lineup$current$position
+length(awayInfo$lineup$current$player)
+length(awayInfo$lineup$current$tierPT)
+length(awayInfo$lineup$current$position)
+data.frame(#
+  	player = awayInfo$lineup$current$player,#
+  	tierPT = awayInfo$lineup$current$tierPt,#
+  	position = awayInfo$lineup$current$position#
+  	)data.frame(#
+  	player = awayInfo$lineup$current$player,#
+  	tierPT = awayInfo$lineup$current$tierPt,#
+  	position = awayInfo$lineup$current$position#
+  	)
+data.frame(#
+  	player = awayInfo$lineup$current$player,#
+  	tierPT = awayInfo$lineup$current$tierPt,#
+  	position = awayInfo$lineup$current$position#
+  	)
+data.frame(player = awayInfo$lineup$current$player,#
+  	tierPT = awayInfo$lineup$current$tierPt,#
+  	position = awayInfo$lineup$current$position#
+  	)
+awayInfo$playerInfo
+awayInfo
+awayInfo$lineup
+awayInfo$lineup$current
+awayInfo[[ c('lineup', 'current') ]]
+awayInfo[[ c('lineup', 'current') ]][, c('player', 'tierPT', 'position')]
+awayInfo[[ c('lineup', 'current') ]][, c('player', 'tierPT', 'position'), with =F]
+awayInfo[[ c('lineup', 'current') ]][, c('player', 'tierPT', 'position'), with =F][order(tierPT)]
+awayInfo[[ c('lineup', 'current') ]][, c('player', 'tierPT', 'position'), with =F][order(tierPT, position)]
+awayInfo[[ c('lineup', 'current') ]][, c('player', 'tierPT', 'position'), with =F][order(position, tierPT)]
+awayInfo[[ c('lineup', 'current') ]][, c('player', 'position', 'tierPT'), with =F][order(position, tierPT)]
+LINEUP <- list(#
+  	away = awayInfo[[ c('lineup', 'current') ]][, c('player', 'position', 'tierPT'), with =F][order(position, tierPT)],#
+  	home = homeInfo[[ c('lineup', 'current') ]][, c('player', 'position', 'tierPT'), with =F][order(position, tierPT)]#
+  )
+LINEUP
+LINEUP <- list(#
+  	away = data.frame(awayInfo[[ c('lineup', 'current') ]][, c('player', 'position', 'tierPT'), with =F][order(position, tierPT)]),#
+  	home = data.frame(homeInfo[[ c('lineup', 'current') ]][, c('player', 'position', 'tierPT'), with =F][order(position, tierPT)])#
+  )
+LINEUP
+' simulation preparation#
+#'#
+#' @param gameid year month date away home with no space#
+#' @param file_name file name for the Rdata file#
+#' @param notes short description of this simulation instance#
+#' @param today live or yyyy-mm-dd#
+#' @param out true to save object, false to return object#
+#' @export#
+#
+simPrep <- function(gameid = "", file_name = "", notes = "", today = "live", out = TRUE) {#
+	mydb = dbConnect(#
+    MySQL(),#
+    user = SQL_user,#
+    password = SQL_pw,#
+    dbname = SQL_db,#
+    host = SQL_host#
+  )#
+  SQL <- dbSendQuery( mydb,#
+  	paste('select * from schedule where gameid = "', gameid, '";', sep="")#
+ 	)#
+#
+ 	game.in <- fetch(SQL)#
+ 	game.today <- game.in[1, 'date']#
+ 	away.team <- game.in[1, 'away']#
+ 	home.team <- game.in[1, 'home']#
+ 	# currently using static csv file, change to database when possible#
+ 	# *******#
+	sch_poss <- read.csv(paste(dir_data, "schedule.csv", sep=""), header<-T)#
+	sch_poss[, "date"] <- as.Date(as.character(sch_poss[, "date"]))#
+	sch <- sch_poss#
+	away_no <- max(#
+		max(as.numeric(#
+			subset(sch,away==away.team)[,"away_cnt"]#
+		)),#
+		max(as.numeric(#
+			subset(sch,home==away.team)[,"home_cnt"]#
+		))#
+	)#
+	home_no <- max(#
+		max(as.numeric(#
+			subset(sch,away==home.team)[,"away_cnt"]#
+		)),#
+		max(as.numeric(#
+			subset(sch,home==home.team)[,"home_cnt"]#
+		))#
+	)#
+	game_cnt <- 10#
+	away_sch <- subset(sch,(away==away.team&away_cnt<away_no&away_cnt>=away_no-game_cnt)|(home==away.team&home_cnt<away_no&home_cnt>=away_no-game_cnt))[,"gameid"]#
+	home_sch <- subset(sch,(away==home.team&away_cnt<home_no&away_cnt>=home_no-game_cnt)|(home==home.team&home_cnt<home_no&home_cnt>=home_no-game_cnt))[,"gameid"]#
+	# pace or number of posessions#
+	poss.n <- round(mean(subset(sch, gameid %in% away_sch|gameid %in% home_sch)[, "poss"]))#
+	# *******#
+#
+	R_file <- paste(dir_data, 'rdata/', today, '/teams/', away.team, '.Rda', sep="")#
+  load(R_file)#
+  awayInfo <- teamInfo#
+#
+  R_file <- paste(dir_data, 'rdata/', today, '/teams/', home.team, '.Rda', sep="")#
+  load(R_file)#
+  homeInfo <- teamInfo#
+#
+  # ACTION#
+  LINEUP <- list(#
+  	away = data.frame(awayInfo[[ c('lineup', 'current') ]][, c('player', 'position', 'tierPT'), with =F][order(position, tierPT)]),#
+  	home = data.frame(homeInfo[[ c('lineup', 'current') ]][, c('player', 'position', 'tierPT'), with =F][order(position, tierPT)])#
+  )#
+#
+	ACT <- list(awayInfo$act$forecastUse, homeInfo$act$forecastUse)#
+	names(ACT) <- c("away", "home")#
+#
+	# OFFENSE#
+	OFF <- list(awayInfo$off$forecastUse, homeInfo$off$forecastUse)#
+	names(OFF) <- c("away", "home")#
+#
+	# DEFENSE#
+	DEF <- list(awayInfo$def$forecastUse, homeInfo$def$forecastUse)#
+	names(DEF) <- c("away", "home")#
+#
+	# REBOUND#
+	REB <- list(awayInfo$reb$forecastUse, homeInfo$reb$forecastUse)#
+	names(REB) <- c("away", "home")#
+#
+	TEAM_pl <- data.frame(#
+		p17 = c(teamSummary[away.team, 'p17_1'] / sum(teamSummary[away.team, c('p17_0', 'p17_1')]), teamSummary[home.team, 'p17_1'] / sum(teamSummary[home.team, c('p17_0', 'p17_1')])),#
+		p18 = c(teamSummary[away.team, 'p18_1'] / sum(teamSummary[away.team, c('p18_0', 'p18_1')]), teamSummary[home.team, 'p18_1'] / sum(teamSummary[home.team, c('p18_0', 'p18_1')]))#
+	)#
+	rownames(TEAM_pl) <- c('away', 'home')#
+	TEAM_pl <- round(TEAM_pl, 3)#
+#
+	TEAM_tm <- data.frame(#
+		p17 = c(teamSummary_T[away.team, 'p17_1'] / sum(teamSummary_T[away.team, c('p17_0', 'p17_1')]), teamSummary_T[home.team, 'p17_1'] / sum(teamSummary_T[home.team, c('p17_0', 'p17_1')])),#
+		p18 = c(teamSummary_T[away.team, 'p18_1'] / sum(teamSummary_T[away.team, c('p18_0', 'p18_1')]), teamSummary_T[home.team, 'p18_1'] / sum(teamSummary_T[home.team, c('p18_0', 'p18_1')]))#
+	)#
+	rownames(TEAM_tm) <- c('away', 'home')#
+	TEAM_tm <- round(TEAM_tm, 3)#
+#
+	TEAM <- list(pl = TEAM_pl, tm = TEAM_tm)#
+	gameData <- list(#
+		poss.n = poss.n,#
+		LINEUP = LINEUP,#
+		ACT = ACT,#
+		OFF = OFF,#
+		DEF = DEF,#
+		REB = REB,#
+		TEAM = TEAM,#
+		notes = notes#
+	)#
+#
+	# if player has any prior information#
+	dir_gm <- paste(dir_data, 'rdata/', today, '/games/', gameid, '/', sep="")#
+	if ( !file.exists( dir_gm ) ) dir.create( dir_gm )#
+#
+	file_gm <- paste(dir_gm, file_name, '.Rda', sep="")#
+	if (out) {#
+		save(gameData, file = file_gm)#
+	} else {#
+		return(gameData)#
+	}#
+}
+simPrep('20150415ATLCHI', 'test')
+R_file <- paste(dir_data, 'rdata/', today, '/games/', gameid, '/', file_name, '.Rda', sep="")#
+load(R_file)#
+list2env( gameData, globalenv() )
+LINEUP
+reb_ft <- function(off_in, def_in) {#
+		reb_p_o <- ifelse(is.na(REB[[off_in]]['ft.o']), 0, REB[[off_in]]['ft.o'])#
+		reb_p_d <- REB[[def_in]]['ft.d']#
+		#y <- rbinom(1, 1, reb_p_o)#
+		y <- 2 - which(rmultinom(1, 1, c(reb_p_o, reb_p_d)) == 1)#
+		# 0 means oreb#
+		# 1 means dreb#
+		if (y == 1) {#
+			poss_add <- 0#
+			type <- "FT.oreb"#
+			state <- "S4"#
+			off_out <- off_in#
+		} else {#
+			poss_add <- 1#
+			state <- "S1"#
+			type <- "FT.dreb"#
+			if(off_in == "away") {#
+				off_out <- "home"#
+			} else {#
+				off_out <- "away"#
+			}#
+		}#
+		return(c(off_out, state, type, poss_add))#
+	}#
+	reb_fg <- function(off_in, def_in) {#
+		reb_p_o <- REB[[off_in]]['fg.o']#
+		reb_p_d <- REB[[def_in]]['fg.d']#
+		# 0 means oreb#
+		# 1 means dreb#
+		# y <- rbinom(1, 1, reb_p_o - reb_p_d)#
+		y <- 2 - which(rmultinom(1, 1, c(reb_p_o, reb_p_d)) == 1)#
+		if (y == 1) {#
+			poss_add <- 0#
+			type <- "FG.oreb"#
+			state <- "S4"#
+			off_out <- off_in#
+		} else {#
+			poss_add <- 1#
+			state <- "S2"#
+			type <- "FG.dreb"#
+			if(off_in == "away") {#
+				off_out <- "home"#
+			} else {#
+				off_out <- "away"#
+			}#
+		}#
+		return(c(off_out, state, type, poss_add))#
+	}#
+#
+	# RESULTS CONTAINER#
+	stats <- list(#
+		away = data.frame(#
+			FGM = rep(0, nrow(ACT$away)),#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(LINEUP$away)#
+		),#
+		home = data.frame(#
+			#player = rownames(ACT$home),#
+			FGM = rep(0, nrow(ACT$home)),#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(LINEUP$home)#
+		)#
+	)
+awayInfo[[ c('lineup', 'current') ]][, c('player', 'position', 'tierPT'), with =F][order(position, tierPT)]
+data.frame(rbind(awayInfo[[ c('lineup', 'current') ]][, c('player', 'position', 'tierPT'), with =F][order(position, tierPT)], c('Team', NA, NA))
+)
+rbind(data.frame(awayInfo[[ c('lineup', 'current') ]][, c('player', 'position', 'tierPT'), with =F][order(position, tierPT)]), c('Team', NA, NA))
+' simulation preparation#
+#'#
+#' @param gameid year month date away home with no space#
+#' @param file_name file name for the Rdata file#
+#' @param notes short description of this simulation instance#
+#' @param today live or yyyy-mm-dd#
+#' @param out true to save object, false to return object#
+#' @export#
+#
+simPrep <- function(gameid = "", file_name = "", notes = "", today = "live", out = TRUE) {#
+	mydb = dbConnect(#
+    MySQL(),#
+    user = SQL_user,#
+    password = SQL_pw,#
+    dbname = SQL_db,#
+    host = SQL_host#
+  )#
+  SQL <- dbSendQuery( mydb,#
+  	paste('select * from schedule where gameid = "', gameid, '";', sep="")#
+ 	)#
+#
+ 	game.in <- fetch(SQL)#
+ 	game.today <- game.in[1, 'date']#
+ 	away.team <- game.in[1, 'away']#
+ 	home.team <- game.in[1, 'home']#
+ 	# currently using static csv file, change to database when possible#
+ 	# *******#
+	sch_poss <- read.csv(paste(dir_data, "schedule.csv", sep=""), header<-T)#
+	sch_poss[, "date"] <- as.Date(as.character(sch_poss[, "date"]))#
+	sch <- sch_poss#
+	away_no <- max(#
+		max(as.numeric(#
+			subset(sch,away==away.team)[,"away_cnt"]#
+		)),#
+		max(as.numeric(#
+			subset(sch,home==away.team)[,"home_cnt"]#
+		))#
+	)#
+	home_no <- max(#
+		max(as.numeric(#
+			subset(sch,away==home.team)[,"away_cnt"]#
+		)),#
+		max(as.numeric(#
+			subset(sch,home==home.team)[,"home_cnt"]#
+		))#
+	)#
+	game_cnt <- 10#
+	away_sch <- subset(sch,(away==away.team&away_cnt<away_no&away_cnt>=away_no-game_cnt)|(home==away.team&home_cnt<away_no&home_cnt>=away_no-game_cnt))[,"gameid"]#
+	home_sch <- subset(sch,(away==home.team&away_cnt<home_no&away_cnt>=home_no-game_cnt)|(home==home.team&home_cnt<home_no&home_cnt>=home_no-game_cnt))[,"gameid"]#
+	# pace or number of posessions#
+	poss.n <- round(mean(subset(sch, gameid %in% away_sch|gameid %in% home_sch)[, "poss"]))#
+	# *******#
+#
+	R_file <- paste(dir_data, 'rdata/', today, '/teams/', away.team, '.Rda', sep="")#
+  load(R_file)#
+  awayInfo <- teamInfo#
+#
+  R_file <- paste(dir_data, 'rdata/', today, '/teams/', home.team, '.Rda', sep="")#
+  load(R_file)#
+  homeInfo <- teamInfo#
+#
+  # ACTION#
+  LINEUP <- list(#
+  	away = rbind(data.frame(awayInfo[[ c('lineup', 'current') ]][, c('player', 'position', 'tierPT'), with =F][order(position, tierPT)]), c('Team', NA, NA)),#
+  	home = rbind(data.frame(awayInfo[[ c('lineup', 'current') ]][, c('player', 'position', 'tierPT'), with =F][order(position, tierPT)]), c('Team', NA, NA))#
+  )#
+#
+	ACT <- list(awayInfo$act$forecastUse, homeInfo$act$forecastUse)#
+	names(ACT) <- c("away", "home")#
+#
+	# OFFENSE#
+	OFF <- list(awayInfo$off$forecastUse, homeInfo$off$forecastUse)#
+	names(OFF) <- c("away", "home")#
+#
+	# DEFENSE#
+	DEF <- list(awayInfo$def$forecastUse, homeInfo$def$forecastUse)#
+	names(DEF) <- c("away", "home")#
+#
+	# REBOUND#
+	REB <- list(awayInfo$reb$forecastUse, homeInfo$reb$forecastUse)#
+	names(REB) <- c("away", "home")#
+#
+	TEAM_pl <- data.frame(#
+		p17 = c(teamSummary[away.team, 'p17_1'] / sum(teamSummary[away.team, c('p17_0', 'p17_1')]), teamSummary[home.team, 'p17_1'] / sum(teamSummary[home.team, c('p17_0', 'p17_1')])),#
+		p18 = c(teamSummary[away.team, 'p18_1'] / sum(teamSummary[away.team, c('p18_0', 'p18_1')]), teamSummary[home.team, 'p18_1'] / sum(teamSummary[home.team, c('p18_0', 'p18_1')]))#
+	)#
+	rownames(TEAM_pl) <- c('away', 'home')#
+	TEAM_pl <- round(TEAM_pl, 3)#
+#
+	TEAM_tm <- data.frame(#
+		p17 = c(teamSummary_T[away.team, 'p17_1'] / sum(teamSummary_T[away.team, c('p17_0', 'p17_1')]), teamSummary_T[home.team, 'p17_1'] / sum(teamSummary_T[home.team, c('p17_0', 'p17_1')])),#
+		p18 = c(teamSummary_T[away.team, 'p18_1'] / sum(teamSummary_T[away.team, c('p18_0', 'p18_1')]), teamSummary_T[home.team, 'p18_1'] / sum(teamSummary_T[home.team, c('p18_0', 'p18_1')]))#
+	)#
+	rownames(TEAM_tm) <- c('away', 'home')#
+	TEAM_tm <- round(TEAM_tm, 3)#
+#
+	TEAM <- list(pl = TEAM_pl, tm = TEAM_tm)#
+	gameData <- list(#
+		poss.n = poss.n,#
+		LINEUP = LINEUP,#
+		ACT = ACT,#
+		OFF = OFF,#
+		DEF = DEF,#
+		REB = REB,#
+		TEAM = TEAM,#
+		notes = notes#
+	)#
+#
+	# if player has any prior information#
+	dir_gm <- paste(dir_data, 'rdata/', today, '/games/', gameid, '/', sep="")#
+	if ( !file.exists( dir_gm ) ) dir.create( dir_gm )#
+#
+	file_gm <- paste(dir_gm, file_name, '.Rda', sep="")#
+	if (out) {#
+		save(gameData, file = file_gm)#
+	} else {#
+		return(gameData)#
+	}#
+}
+simPrep('20150415ATLCHI', 'test')
+R_file <- paste(dir_data, 'rdata/', today, '/games/', gameid, '/', file_name, '.Rda', sep="")#
+	load(R_file)#
+	list2env( gameData, globalenv() )#
+#
+	reb_ft <- function(off_in, def_in) {#
+		reb_p_o <- ifelse(is.na(REB[[off_in]]['ft.o']), 0, REB[[off_in]]['ft.o'])#
+		reb_p_d <- REB[[def_in]]['ft.d']#
+		#y <- rbinom(1, 1, reb_p_o)#
+		y <- 2 - which(rmultinom(1, 1, c(reb_p_o, reb_p_d)) == 1)#
+		# 0 means oreb#
+		# 1 means dreb#
+		if (y == 1) {#
+			poss_add <- 0#
+			type <- "FT.oreb"#
+			state <- "S4"#
+			off_out <- off_in#
+		} else {#
+			poss_add <- 1#
+			state <- "S1"#
+			type <- "FT.dreb"#
+			if(off_in == "away") {#
+				off_out <- "home"#
+			} else {#
+				off_out <- "away"#
+			}#
+		}#
+		return(c(off_out, state, type, poss_add))#
+	}#
+	reb_fg <- function(off_in, def_in) {#
+		reb_p_o <- REB[[off_in]]['fg.o']#
+		reb_p_d <- REB[[def_in]]['fg.d']#
+		# 0 means oreb#
+		# 1 means dreb#
+		# y <- rbinom(1, 1, reb_p_o - reb_p_d)#
+		y <- 2 - which(rmultinom(1, 1, c(reb_p_o, reb_p_d)) == 1)#
+		if (y == 1) {#
+			poss_add <- 0#
+			type <- "FG.oreb"#
+			state <- "S4"#
+			off_out <- off_in#
+		} else {#
+			poss_add <- 1#
+			state <- "S2"#
+			type <- "FG.dreb"#
+			if(off_in == "away") {#
+				off_out <- "home"#
+			} else {#
+				off_out <- "away"#
+			}#
+		}#
+		return(c(off_out, state, type, poss_add))#
+	}#
+#
+	# RESULTS CONTAINER#
+	stats <- list(#
+		away = data.frame(#
+			FGM = rep(0, nrow(LINEUP$away)),#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(LINEUP$away)#
+		),#
+		home = data.frame(#
+			#player = rownames(ACT$home),#
+			FGM = rep(0, nrow(LINEUP$home)),#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(LINEUP$home)#
+		)#
+	)
+stats
+RESULTS CONTAINER#
+	stats <- list(#
+		away = data.frame(#
+			FGM = rep(0, nrow(LINEUP$away$player)),#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(LINEUP$away$player)#
+		),#
+		home = data.frame(#
+			#player = rownames(ACT$home),#
+			FGM = rep(0, nrow(LINEUP$home$player)),#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(LINEUP$home$player)#
+		)#
+	)
+LINEUP$away
+LINEUP$away$player
+RESULTS CONTAINER#
+	stats <- list(#
+		away = data.frame(#
+			FGM = rep(0, nrow(LINEUP$away)),#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(LINEUP$away$player)#
+		),#
+		home = data.frame(#
+			#player = rownames(ACT$home),#
+			FGM = rep(0, nrow(LINEUP$home)),#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(LINEUP$home$player)#
+		)#
+	)
+stats
+RESULTS CONTAINER#
+	stats <- list(#
+		away = data.frame(#
+			FGM = rep(0, nrow(LINEUP$away)),#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			#FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(LINEUP$away$player)#
+		),#
+		home = data.frame(#
+			#player = rownames(ACT$home),#
+			FGM = rep(0, nrow(LINEUP$home)),#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			#FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(LINEUP$home$player)#
+		)#
+	)
+stats
+RESULTS CONTAINER#
+	stats <- list(#
+		away = data.frame(#
+			ACT = rep(0, nrow(LINEUP$away)),#
+			FGM = 0,#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			PTS = 0,#
+			TO = 0,#
+			row.names = rownames(LINEUP$away$player)#
+		),#
+		home = data.frame(#
+			#player = rownames(ACT$home),#
+			ACT = rep(0, nrow(LINEUP$home)),#
+			FGM = 0,#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			#FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			row.names = rownames(LINEUP$home$player)#
+		)#
+	)
+stats
+awayInfo$act$forecastUse
+awayInfo$act$forecastUse$xnow
+tm<-'CHI'
+today
+per
+per<-5
+out
+out<-TRUE
+R_file <- paste(dir_data, 'rdata/', today, '/teams/', tm, '.Rda', sep="")#
+  load(R_file)#
+  dir_team <- paste(dir_image, today, '/teams/', tm, '/action/', sep="")#
+	dataBoo <- teamInfo [[ c('lineup', 'boolean') ]]#
+  dataOff <- teamInfo [[ c('data', 'off')]]#
+#
+  mydb = dbConnect(#
+    MySQL(),#
+    user = SQL_user,#
+    password = SQL_pw,#
+    dbname = SQL_db,#
+    host = SQL_host#
+  )#
+  SQL <- dbSendQuery( mydb,#
+    paste('select date from schedule where (away = "', tm, '" or home = "', tm, '") and date > "', dataDate, '" order by date;'#
+    , sep="")#
+  )#
+  game.next <- fetch(SQL)#
+#
+  if ( nrow(game.next) == 0) {#
+    SQL <- dbSendQuery( mydb,#
+    paste('select case when away = "', tm, '" then 0 else 1 end as HC,#
+      case  when away = "', tm, '" and restaway = 1 then 1#
+            when home = "', tm, '" and resthome = 1 then 1#
+            else 0 end as B2B,#
+      case  when away = "', tm, '" and resthome = 1 then 1#
+            when home = "', tm, '" and restaway = 1 then 1#
+            else 0 end as B2B_opp#
+    from schedule where (away = "', tm, '" or home = "', tm, '") order by date;'#
+    , sep="")#
+    )#
+    basic.in.pre <- fetch(SQL)#
+    basic.in <- basic.in.pre [nrow(basic.in.pre), ]#
+    SQL <- dbSendQuery( mydb,#
+      paste('select date from schedule where (away = "', tm, '" or home = "', tm, '") order by date;'#
+      , sep="")#
+    )#
+    game.in.pre <- fetch(SQL)#
+    game.in <- game.in.pre [ nrow(game.in.pre), ]#
+  } else {#
+#
+    SQL <- dbSendQuery( mydb,#
+      paste('select case when away = "', tm, '" then 0 else 1 end as HC,#
+        case  when away = "', tm, '" and restaway = 1 then 1#
+              when home = "', tm, '" and resthome = 1 then 1#
+              else 0 end as B2B,#
+        case  when away = "', tm, '" and resthome = 1 then 1#
+              when home = "', tm, '" and restaway = 1 then 1#
+              else 0 end as B2B_opp#
+      from schedule where (away = "', tm, '" or home = "', tm, '") and date > "', dataDate, '" order by date;'#
+      , sep="")#
+    )#
+    basic.in <- fetch(SQL) [1, ]#
+    SQL <- dbSendQuery( mydb,#
+      paste('select date from schedule where (away = "', tm, '" or home = "', tm, '") and date > "', dataDate, '" order by date;'#
+      , sep="")#
+    )#
+    game.in <- fetch(SQL) [1, ]#
+  }#
+#
+  if (today == 'live') {#
+#
+    SQL <- dbSendQuery( mydb, paste('select team, player, tierPT, position, minutes, avail from lineupsnew where team = "', tm, '" order by position, tierPT;', sep="") )#
+    lineup.in <- fetch(SQL)#
+    SQL <- dbSendQuery( mydb, paste('select type from offbasic where team = "', tm, '" and p = "act" and var = "1" order by id;', sep="") )#
+    basic.var <- fetch(SQL)#
+    SQL <- dbSendQuery( mydb, paste('select player from actcor where team = "', tm, '" and pl = "team" and yvar = "1" order by player;', sep="") )#
+    y.var <- fetch(SQL)#
+  } else {#
+#
+    #SQL <- dbSendQuery( mydb, paste('select team, player, tierPT, position, minutes, avail from lineupsback where date = "', today, '" and team = "', tm, '" order by position, tierPT;', sep="") )#
+    SQL <- dbSendQuery( mydb, paste('select team, player, tierPT, position, minutes, avail from lineupsback where date = "', today, '" and team = "', tm, '" order by position, tierPT;', sep="") )#
+    lineup.in <- fetch(SQL)#
+    SQL <- dbSendQuery( mydb, paste('select type from offbasicback where date = "', today, '" and team = "', tm, '" and p = "act" and var = "1" order by id;', sep="") )#
+    basic.var <- fetch(SQL)#
+    SQL <- dbSendQuery( mydb, paste('select player from actcorback where date = "', today, '" and team = "', tm, '" and pl = "team" and yvar = "1" order by player;', sep="") )#
+    y.var <- fetch(SQL)#
+  }#
+  dbDisconnect(mydb)
+if ( length(unique(dataBoo$per)) > 1 ) {#
+#
+    per_col <- unique(dataBoo$per) [ 1 : (length( unique(dataBoo$per) ) - 1) ]#
+    xreg.per <- matrix(0, nrow=1, ncol=length(per_col))#
+    colnames(xreg.per) <- per_col#
+  } else {#
+#
+    xreg.per <- c()#
+  }#
+  # Step 2 : create row of #
+  if ( nrow(basic.var) > 0 ) {#
+  	xreg.basic <- basic.in [, basic.var]#
+    colnames(xreg.basic) <- basic.var#
+  } else {#
+    xreg.basic <- c()#
+  }#
+  # Step 3 : create boolean matrix of player presence#
+  if ( nrow(y.var) > 0 ) {#
+    xreg.play.all <- matrix( 1, nrow=1, ncol=length(y.var) )#
+    xreg.play.now <- matrix(#
+    	ifelse(y.var %in% lineup $ player, 1, 0),#
+    	nrow=1,#
+    	ncol=length(y.var)#
+    )#
+    colnames(xreg.play) <- y.var#
+  } else {#
+    xreg.play.all <- c()#
+    xreg.play.now <- c()#
+  }#
+  xreg.all <- cbind(xreg.per, xreg.basic, xreg.play.all)#
+  xreg.now <- cbind(xreg.per, xreg.basic, xreg.play.now)#
+  lineup <- data.frame(#
+    lineup.in[, c('team', 'player', 'tierPT', 'position', 'minutes', 'avail')]#
+	)
+lineup
+homeInfo$act$forecastUse
+player y#
+	for (pl.use in pl.all $ player) {#
+#
+    pl.load <- ifelse(substr(pl.use, nchar(pl.use), nchar(pl.use))=='.', substr(pl.use, 1, nchar(pl.use)-1), pl.use)#
+    R_pl <- paste(dir_data, 'rdata/', today, '/players/', pl.load, '.Rda', sep="")#
+    load(R_pl)#
+#
+		pl.info <- playerInfo#
+#
+		if ( is.list(pl.info [[ 'act' ]] ) ) {#
+#
+			if ( is.object( pl.info [[ c('act', 'y.beta') ]] ) ) {#
+				boo.all.use <- boo.all#
+				boo.now.use <- boo.now#
+				pl.beta <- pl.info [[ c('act', 'y.beta') ]]#
+				pl.rel <- as.character(pl.info [[ 'relevant' ]] $ player)#
+				for (pl.temp in pl.rel) {#
+					if (! pl.temp %in% lineup $ player) {#
+						pl.temp2 <- gsub( "-|\\.| |'", "_", paste(pl.temp, tm) )#
+						boo.add <- matrix(0)#
+						colnames(boo.add) <- pl.temp2#
+						boo.all.use <- cbind(boo.add, boo.all.use)#
+						boo.now.use <- cbind(boo.add, boo.now.use)#
+					}#
+				}#
+        xy.forecast [pl.use, 'y'] <- tryCatch({#
+#
+          a <- round( predict( pl.beta, newdata = data.frame(boo.all.use, x = xy.forecast[pl.use, 'x']) ), 3 )#
+        }, error = function(e) {#
+          print ( paste( 'prepAct beta function for player', pl.use, 'produced the following error, holt-winter used instead:') )#
+          message ( e )#
+          a <- round(pl.info [[ c('act', 'y.ts') ]] $ coeff, 3)#
+        }, warning = function(w) {#
+          print ( paste( 'prepAct beta function for player', pl.use, 'produced the following warning:') )#
+          message ( w )#
+          a <- round( predict( pl.beta, newdata = data.frame(boo.all.use, x = xy.forecast[pl.use, 'x']) ), 3 )#
+        }, finally = function(f) {return(a)}#
+        )#
+#
+        if ( pl.use %in% pl.now $ player ) {#
+#
+          xy.forecast [pl.use, 'ynow'] <- tryCatch({#
+#
+            a <- round( predict( pl.beta, newdata = data.frame(boo.now.use, x = xy.forecast[pl.use, 'x']) ), 3 )#
+          }, error = function(e) {#
+            print ( paste( 'prepAct beta function for player', pl.use, 'produced the following error, holt-winter used instead:') )#
+            message ( e )#
+            a <- round(pl.info [[ c('act', 'y.ts') ]] $ coeff, 3)#
+          }, warning = function(w) {#
+            print ( paste( 'prepAct beta function for player', pl.use, 'produced the following warning:') )#
+            message ( w )#
+            a <- round( predict( pl.beta, newdata = data.frame(boo.now.use, x = xy.forecast[pl.use, 'x']) ), 3 )#
+          }, finally = function(f) {return(a)}#
+          )#
+        }#
+			} else {#
+#
+        print ( paste( 'prepAct has no beta function for player', pl.use, ', holt-winter used instead:') )#
+        xy.forecast [pl.use, 'y'] <- round(pl.info [[ c('act', 'y.ts') ]] $ coeff, 3)#
+#
+        if ( pl.use %in% pl.now $ player ) {#
+          xy.forecast [pl.use, 'ynow'] <- round(pl.info [[ c('act', 'y.ts') ]] $ coeff, 3)#
+        }#
+      }#
+		}#
+	}#
+	# team action#
+	y.arima.t <- teamInfo [[ c('act', 't.arima') ]]#
+	# with all avail#
+	y.t.all <- round(forecast.Arima( y.arima.t, xreg= xreg.all ) $ mean [1], 3)#
+	# with current avail#
+	y.t.now <- round(forecast.Arima( y.arima.t, xreg= xreg.now ) $ mean [1], 3)#
+#
+	# normalize y#
+	xy.forecast $ y <- round( xy.forecast $ y / sum(xy.forecast $ y, na.rm=TRUE) * (1 - y.t.all), 3)#
+	xy.forecast $ ynow <- round( xy.forecast $ ynow / sum(xy.forecast $ ynow, na.rm=TRUE) * ( 1 - y.t.now ), 3)#
+#
+  # player y#
+  for (pl.use in pl.all $ player) {#
+#
+    pl.load <- ifelse(substr(pl.use, nchar(pl.use), nchar(pl.use))=='.', substr(pl.use, 1, nchar(pl.use)-1), pl.use)#
+    R_pl <- paste(dir_data, 'rdata/', today, '/players/', pl.load, '.Rda', sep="")#
+    load(R_pl)#
+#
+    pl.states <- playerInfo [[ c('s') ]]#
+    xy.forecast [pl.use, states] <- round( xy.forecast [pl.use, 'ynow'] * pl.states $ action, 3)#
+  }#
+#
+	act.forecast <- rbind(#
+		xy.forecast,#
+		data.frame(#
+      player = 'Team',#
+      team = tm,#
+      date = game.in,#
+      x = 0,#
+      xnow = 0,#
+			y = y.t.all,#
+			ynow = y.t.now,#
+      S1 = y.t.now / 4,#
+      S2 = y.t.now / 4,#
+      S3 = y.t.now / 4,#
+      S4 = y.t.now / 4,#
+			row.names = 'Team'#
+		)#
+	)
+simPrep <- function(gameid = "", file_name = "", notes = "", today = "live", out = TRUE) {#
+	mydb = dbConnect(#
+    MySQL(),#
+    user = SQL_user,#
+    password = SQL_pw,#
+    dbname = SQL_db,#
+    host = SQL_host#
+  )#
+  SQL <- dbSendQuery( mydb,#
+  	paste('select * from schedule where gameid = "', gameid, '";', sep="")#
+ 	)#
+#
+ 	game.in <- fetch(SQL)#
+ 	game.today <- game.in[1, 'date']#
+ 	away.team <- game.in[1, 'away']#
+ 	home.team <- game.in[1, 'home']#
+ 	# currently using static csv file, change to database when possible#
+ 	# *******#
+	sch_poss <- read.csv(paste(dir_data, "schedule.csv", sep=""), header<-T)#
+	sch_poss[, "date"] <- as.Date(as.character(sch_poss[, "date"]))#
+	sch <- sch_poss#
+	away_no <- max(#
+		max(as.numeric(#
+			subset(sch,away==away.team)[,"away_cnt"]#
+		)),#
+		max(as.numeric(#
+			subset(sch,home==away.team)[,"home_cnt"]#
+		))#
+	)#
+	home_no <- max(#
+		max(as.numeric(#
+			subset(sch,away==home.team)[,"away_cnt"]#
+		)),#
+		max(as.numeric(#
+			subset(sch,home==home.team)[,"home_cnt"]#
+		))#
+	)#
+	game_cnt <- 10#
+	away_sch <- subset(sch,(away==away.team&away_cnt<away_no&away_cnt>=away_no-game_cnt)|(home==away.team&home_cnt<away_no&home_cnt>=away_no-game_cnt))[,"gameid"]#
+	home_sch <- subset(sch,(away==home.team&away_cnt<home_no&away_cnt>=home_no-game_cnt)|(home==home.team&home_cnt<home_no&home_cnt>=home_no-game_cnt))[,"gameid"]#
+	# pace or number of posessions#
+	poss.n <- round(mean(subset(sch, gameid %in% away_sch|gameid %in% home_sch)[, "poss"]))#
+	# *******#
+#
+	R_file <- paste(dir_data, 'rdata/', today, '/teams/', away.team, '.Rda', sep="")#
+  load(R_file)#
+  awayInfo <- teamInfo#
+#
+  R_file <- paste(dir_data, 'rdata/', today, '/teams/', home.team, '.Rda', sep="")#
+  load(R_file)#
+  homeInfo <- teamInfo#
+#
+  # ACTION#
+	ACT <- list(awayInfo$act$forecastUse, homeInfo$act$forecastUse)#
+	names(ACT) <- c("away", "home")#
+#
+	# OFFENSE#
+	OFF <- list(awayInfo$off$forecastUse, homeInfo$off$forecastUse)#
+	names(OFF) <- c("away", "home")#
+#
+	# DEFENSE#
+	DEF <- list(awayInfo$def$forecastUse, homeInfo$def$forecastUse)#
+	names(DEF) <- c("away", "home")#
+#
+	# REBOUND#
+	REB <- list(awayInfo$reb$forecastUse, homeInfo$reb$forecastUse)#
+	names(REB) <- c("away", "home")#
+#
+	TEAM_pl <- data.frame(#
+		p17 = c(teamSummary[away.team, 'p17_1'] / sum(teamSummary[away.team, c('p17_0', 'p17_1')]), teamSummary[home.team, 'p17_1'] / sum(teamSummary[home.team, c('p17_0', 'p17_1')])),#
+		p18 = c(teamSummary[away.team, 'p18_1'] / sum(teamSummary[away.team, c('p18_0', 'p18_1')]), teamSummary[home.team, 'p18_1'] / sum(teamSummary[home.team, c('p18_0', 'p18_1')]))#
+	)#
+	rownames(TEAM_pl) <- c('away', 'home')#
+	TEAM_pl <- round(TEAM_pl, 3)#
+#
+	TEAM_tm <- data.frame(#
+		p17 = c(teamSummary_T[away.team, 'p17_1'] / sum(teamSummary_T[away.team, c('p17_0', 'p17_1')]), teamSummary_T[home.team, 'p17_1'] / sum(teamSummary_T[home.team, c('p17_0', 'p17_1')])),#
+		p18 = c(teamSummary_T[away.team, 'p18_1'] / sum(teamSummary_T[away.team, c('p18_0', 'p18_1')]), teamSummary_T[home.team, 'p18_1'] / sum(teamSummary_T[home.team, c('p18_0', 'p18_1')]))#
+	)#
+	rownames(TEAM_tm) <- c('away', 'home')#
+	TEAM_tm <- round(TEAM_tm, 3)#
+#
+	TEAM <- list(pl = TEAM_pl, tm = TEAM_tm)#
+	gameData <- list(#
+		poss.n = poss.n,#
+		ACT = ACT,#
+		OFF = OFF,#
+		DEF = DEF,#
+		REB = REB,#
+		TEAM = TEAM,#
+		notes = notes#
+	)#
+#
+	# if player has any prior information#
+	dir_gm <- paste(dir_data, 'rdata/', today, '/games/', gameid, '/', sep="")#
+	if ( !file.exists( dir_gm ) ) dir.create( dir_gm )#
+#
+	file_gm <- paste(dir_gm, file_name, '.Rda', sep="")#
+	if (out) {#
+		save(gameData, file = file_gm)#
+	} else {#
+		return(gameData)#
+	}#
+}
+RESULTS CONTAINER#
+	stats <- list(#
+		away = data.frame(#
+			FGM = rep(0, nrow(ACT$away)),#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(ACT$away)#
+		),#
+		awayLineup = rownames(ACT$away),#
+		home = data.frame(#
+			FGM = rep(0, nrow(ACT$home)),#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			FTA = 0,#
+			PTS = 0,#
+			TO = 0,#
+			ACT = 0,#
+			row.names = rownames(ACT$home)#
+		),#
+		homeLineup = rownames(ACT$away)#
+	)
+stats
+RESULTS CONTAINER#
+	stats <- list(#
+		away = data.frame(#
+			ACT = rep(0, nrow(ACT$away)),#
+			FGM = 0,#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			PTS = 0,#
+			TO = 0,#
+			row.names = rownames(ACT$away)#
+		),#
+		awayLineup = rownames(ACT$away),#
+		home = data.frame(#
+			ACT = rep(0, nrow(ACT$home)),#
+			FGM = 0,#
+			FGA = 0,#
+			PT3 = 0,#
+			FTM = 0,#
+			PTS = 0,#
+			TO = 0,#
+			row.names = rownames(ACT$home)#
+		),#
+		homeLineup = rownames(ACT$away)#
+	)
+stats
+install_bitbucket('ballwiz/ballwiz', auth_user='ballwiz', password='ballwizzy824')
+2000000 / 15
+library(devtools)
+install_bitbucket('ballwiz/ballwiz', auth_user='ballwiz', password='ballwizzy824')
+?clogit
+library(clogit)
+install.packages('clogit')
+install.packages('survival')
+?strat
+?strata
+table.10.3 <-  data.frame(pair=rep(1:144,rep(2,144)),#
+                         MI=rep(c(0,1),144),#
+                         diabetes=c(rep(c(1,1),9),#
+                                    rep(c(1,0),16),#
+                                    rep(c(0,1),37),#
+                                    rep(c(0,0),82))#
+                          )
+table.10.3
+library("survival")#
+fit.CLR <- clogit(MI ~ diabetes + strata(pair), method="exact", data=table.10.3)#
+#
+summary(fit.CLR)
+?strata
+rep(1:144,rep(2,144)
+)
+?rep
+rep(1:144,2)
+rep(2, 144)
+library(devtools)
+install_bitbucket('ballwiz/ballwiz', auth_user='ballwiz', password='ballwizzy824')
+library(ballwiz)
+dataLoad('live')
+team<-'ATL'
+R_file <- paste(dir_data, 'rdata/', today, '/teams/', team, '.Rda', sep="")#
+  load(R_file)
+today<-'live'
+R_file <- paste(dir_data, 'rdata/', today, '/teams/', team, '.Rda', sep="")#
+  load(R_file)
+base <- merge(#
+  	unique(teamInfo$data$off$date),#
+  	teamInfo$lineup$current[, c('player', 'position', 'tierPT'), with = F]#
+  )#
+  colnames(base)[1] <- 'date'
+base
+dataDates <- tail(unique(roster_all$date), 60)#
+#
+	# Lineup Information#
+	dat <- teamData [[ c(team.on, 'off')]]#
+	lineup <- teamData [[ c(team.on, 'lineup')]]#
+#
+	graphset <- merge(lineup[, c('player', 'position', 'bench')], dat, by = 'player')#
+#
+	actPlots <- list()#
+#
+	g <- ggplot(subset(graphset, date %in% dataDates)) +#
+  	geom_point(aes(x = date, y = player, size = poss_pct, colour = as.character(bench)), fill = "white", alpha = .5) +#
+  	scale_colour_manual(values = c('0' = 'springgreen1', '1' = 'lightblue')) +#
+  	geom_point(aes(x=date, y=player, size = act_pct), colour = "salmon", lty=3) +#
+  	facet_grid(position ~ ., scales="free") +#
+    #scale_colour_hue('') +#
+    scale_x_date(breaks='1 month', minor_breaks='1 day', labels=date_format("%b")) +#
+    theme(#
+    	text = element_text(size=6),#
+    	legend.position = "none",#
+    	# legend.text = element_text(size=6),#
+    	axis.text.x = element_text(size=6, angle=0, vjust=1),#
+    	axis.text.y = element_text(size=6, angle=0, vjust=1),#
+    	axis.title.x = element_blank(),#
+    	axis.title.y = element_blank()
+)
+library(ggplot)
+library(ggplot2)
+teamData
+ls()
+names(teamInfo)
+names(teamInfo$off)
+names(teamInfo$data)
+names(teamInfo$data$off)
+temp <- teamInfo$data$off
+dat <- teamInfo$data$off
+dat <- fread('household_power_consumption.txt')#
+dat$Date <- as.Date(dat$Date, "%d/%m/%Y")
+library(data.table)#
+setwd('/Users/HOME/GitHub/datasciencecoursera/exploratoryanalysis/week1/')#
+#
+dat <- fread('household_power_consumption.txt')#
+dat$Date <- as.Date(dat$Date, "%d/%m/%Y")
+with(subset(dat, Date %in% c(as.Date(c("2007-02-01", "2007-02-02")))),#
+	plot(#
+		strptime(paste(Date, Time), format="%Y-%m-%d %H:%M:%S"),#
+		as.numeric(Global_active_power),#
+		ylab = "Global Active Power (kilowatts)",#
+	)#
+)
+?plot
+examples(plot)
+example(plot)
+plot(#
+		strptime(paste(Date, Time), format="%Y-%m-%d %H:%M:%S"),#
+		as.numeric(Global_active_power),#
+		ylab = "Global Active Power (kilowatts)",#
+		type = "line"#
+	)
+with(subset(dat, Date %in% c(as.Date(c("2007-02-01", "2007-02-02")))),#
+	plot(#
+		strptime(paste(Date, Time), format="%Y-%m-%d %H:%M:%S"),#
+		as.numeric(Global_active_power),#
+		ylab = "Global Active Power (kilowatts)",#
+		type = "line"#
+	)#
+)
+par()
+with(subset(dat, Date %in% c(as.Date(c("2007-02-01", "2007-02-02")))),#
+	plot(#
+		strptime(paste(Date, Time), format="%Y-%m-%d %H:%M:%S"),#
+		as.numeric(Global_active_power),#
+		ylab = "Global Active Power (kilowatts)",#
+		lty = "line"#
+	)#
+)
+with(subset(dat, Date %in% c(as.Date(c("2007-02-01", "2007-02-02")))),#
+	lines(#
+		strptime(paste(Date, Time), format="%Y-%m-%d %H:%M:%S"),#
+		as.numeric(Global_active_power),#
+		ylab = "Global Active Power (kilowatts)"#
+	)#
+)

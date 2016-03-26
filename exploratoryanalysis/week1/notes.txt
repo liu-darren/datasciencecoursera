@@ -1,0 +1,125 @@
+#### WEEK 1 ####
+Principles of Analytic Graphics
+
+1. Show comparisons
+2. Show causality, mechanism, explanation, systematic structure
+- given topic and how the variable effects the subjects under issue
+3. Show multivariate data
+4. Integration of evidence
+- make use of words, numbers, images
+- not limited to the tool
+5. Describe and document with appropriate labels, scales, sources
+6. Content is king
+
+www.edwardtufte.com as reference
+
+Exploratory Graphs
+- for you to understand ...
+data properties
+patterns in data
+suggest modeling strategies
+debug analyses
+communicate results
+
+- they are made quickly
+- a large number are made
+- axes/legends cleaned up later
+- color/size used for information
+
+simple summaries of data
+* one dimension
+- five number summary
+- boxplots
+- histograms
+- density plot
+- barplot
+
+summmary() gives 5 number summary & mean
+
+2 dimension
+- scatterplots
+
+> 2 dimension
+- use color, size, shape to add dimensions
+- spinning plots
+
+with() ?
+
+R Graph Gallery for inspiration
+
+Plotting systems in R
+- "Artist's palette" model
+- start with blank canvas and build
+- use annotations (text, lines, points, axis)
+
+Lattice system: library(lattice)
+- plots created with a single call
+- most useful for conditioning types of plots: how y changes with x across levels of z
+
+ggplot2
+- adding layers
+- good defaults
+
+The Base Plotting Systems
+- graphics: includes plot, hist, boxplot
+- grDevices: contains all the codes implementing various graphics devices: X11, PDF, PostScript, PNG
+Lattice
+- lattice: produce Trellis graphics, include yxplot bwplot, levelplot
+- grid: lattice builds on top of it, rarely call its functions directly
+
+- plot
+make scatterplot, or other types depending on the class of the object
+- lines
+add lines to a plot
+- points
+add points
+- text
+add text labels to a plot using xy coords
+- title
+add annotations to x, y axis labels
+- mtext
+add arbitrary text to margins
+- axis
+add axis ticks/labels
+- par
+par(
+	mfrow=c(1,2), # number of facets
+	mfcol=c(2, 1), # same idea except columsn get filled first
+	mar=c(4,4,2,1), # margins of all 4 sides
+	oma=c(0,0,2,0)
+	)
+ 
+Graphics Device
+- window on computer (screen device), PDF, PNG, JPEG, SVG (file devices)
+- most common is screen device
+quartz() for mac
+windows() for windows
+x11() for linux
+
+- file devices are exported out
+- vector formats
+can be too large for plots with large numbe of points
+- pdf
+useful for line-type graphics, resizes well, usually portable
+- svg
+XML-based scalable vector graphics, good for web
+- win.metafile
+only for windows, outdated
+- graphic file
+
+- bitmap formats
+- png
+bitmapped format, good for drawing with solid colors
+- jpeg
+does not resize well, good for plotting many many points
+- tiff
+something else
+- bmp
+used for icons
+
+- may open multiple graphics device, but can only graph to one at once
+- dev.cur() shows what device you're on
+- dev.set() takes integer value and takes you to the device
+- dev.copy() copy plot from once device to another
+- dev.copy2pdf() copies screen plot to pdf file, may not be exact
+

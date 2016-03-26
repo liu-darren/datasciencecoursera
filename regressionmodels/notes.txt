@@ -1,0 +1,19 @@
+## Week 1 ##
+
+father of regression: Francis Galton
+parent's height to children's height
+
+- questions to answer for regression
+- find a parsimonious, easily described mean relationship between two variables
+- investigate variation of response that is residual to input (residual)
+- quantify what impact additional information has beyond current input
+- figure out what assumptions are needed to generalize beyond the data (inference)
+- 
+
+i. least squares
+install.packages(‘usingR’)
+library(manipulate)
+- interesting method, the origin is now the mean
+lm (I(y - mean(y)) ~ I(x - mean(x)) - 1, data = …)
+
+Y = B0 + B1X1, where B1 = cor(Y, X) ( sd(Y) / sd(X) )

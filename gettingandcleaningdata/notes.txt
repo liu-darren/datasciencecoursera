@@ -1,0 +1,126 @@
+Data are values of qualitative or quantitative variables, belonging to a set of items
+
+- record every change
+- one table for each kind of variable
+- multiple tables should have a column where they can be linked (key?)
+- code book describing each variable and its values (schema?)
+- info about variable (unit), info about summary choices, about experimental design
+- data processing using a script, NO parameters!
+
+Downloading files
+- getwd(), setwd()
+- relative setwd(“./data”) or setwd(“../”)
+file.exists() # check existence of directory or file
+download.file(fileurl, destfile, method) # for https url, method = “curl"
+list.files(“./data")
+
+Reading files
+
+Excel
+library(xlsx)
+read.xlsx()
+
+### XML ###
+- XML extensible markup langugage
+- two components: markup and content
+
+library(XML)
+doc <- xmlTreeParse(fileURL, useInternal=TRUE) #internal true gets all the elements
+- may have to use Rcurl if https
+
+rootNode <- xmlRoot(doc)
+- xmlRoot acts as a wrapper around doc
+- content can be accessed as a list
+
+xmlSApply(rootNode, xmlValue)
+- command will iterate through all rootNode elements and extract value
+
+xpathSApply(rootNode, “//name”, xmlValue)
+- command will iterate through all rootNode and extract value from name tags
+
+doc <- htmlTreeParse(fileUrl, userInternal=TRUE) 
+xpathSApply(doc, “//li[@class=‘score’]”,xmlValue)
+- an example where an HTML document is parsed, values of all list elements with class score is extracted
+
+JSON
+library(jsonlite)
+jsonData <- fromJSON(url)
+myjson <- toJSON(iris, pretty=TRUE) # pretty indents the data properly
+cat(myjson)
+
+library(data.table)
+- good for big data sets, summarization
+tables() # see all tables in memory
+- most aspects the same as data.frame
+- except column subsetting is used with expressions for summaries
+DT[, list(mean(x), sum(z)]
+- create new column
+DT[, w:=z^2]
+DT[, m:={temp<-x+y; log(temp)}]
+DT[, a:=x>0]
+DT[, b:= mean(x+w), by=a] # mean group by a
+DT[, .N, by=x] # count group by x
+- keys
+setkey(DT, x)
+setkey[‘a’] # subset where x = a
+setkey[DT1, x); setkey(DT2, x)
+merge(DT1, DT2)
+
+Reading from the web
+con <- url(<addy>)
+htmlCode <- readLines(con)
+close(con)
+
+### Reading from MySQL ###
+
+install.packages(‘RMySQL’)
+tb <- dbConnect(MySQL(), user=“”, db=“”, host=“”)
+allTables <- dbListTables(tb)
+query <- dbSendQuery(q, “select * from table”)
+dat <- fetch(query, n=10)
+dbClearResult(query)
+dbDisconnect(tb)
+
+### HDF5 ###
+- Used for storing large data sets
+- Heirarchical data format
+
+source(‘http://bioconductor.org/biocLite.R')
+biocLite(‘rhdf5’)
+created = h5createGroup(“example.h5”, “foo”)
+created = h5createGroup(“example.h5”, “baa”)
+
+### web ###
+con = url(“”)
+htmlCode = readLines(con)
+close(con)
+library(XML)
+url <- “”
+html <- htmlTreeParse(url, useInternalNodes=T)
+
+library(httr)
+html2 <- GET(url)
+content2 <- content(html2, as=‘text’)
+parsedHtml <- htmlParse(content2, asText=TRUE)
+xpathSApply(parsedHtml, ‘//title’, xmlValue)
+user<-“”
+passwd<-“”
+GET(url, authenticate(user,passwd))
+
+google <- handle(url)
+pg1 <- GET(handle=google, path=“/“)
+
+myapp <- oauth_app(“twitter”, key=“”, secret=“”)
+sig <- sign_oauth2.0(myapp, token)
+homeTL <- GET(url, sig)
+json1 <- content(homeTL)
+json2 <- jsonlite::fromJSON(toJSON(json1))
+json2[1,1:4]
+
+- file : open a connection to a text file
+- url : open url
+- gzfile : open gz file
+- bzfile : open bz file
+
+
+

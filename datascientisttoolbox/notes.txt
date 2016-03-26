@@ -1,0 +1,93 @@
+Week 1:
+- Data Scientist is the Venn Diagram intersection of traditional stats, hacking, and ...
+- Most of the stuff I already know
+
+Week 2:
+- / is too directory and ~ is home directory
+- e.g. ~$ means logged in as root
+- bash for windows = terminal for mac
+- working directory = whatever directory i’m in
+- pwd : print working directory
+- clear : clears prompt
+- ls : list files and folders in the current directory
+- flags are options that are preceded by a dash ( - )
+     flag -a lists hidden and unhidden
+     flag -l lists details
+     flag -al works
+- cd : change directory
+- cd takes you to root directory, cd .. takes you up one
+- mkdir : make directory
+- touch : creates empty file
+- cp : copy <from> <to>
+     flag -r allows copying of an entire directory
+- rm : remove
+     flag -r allows removal of an entire directory
+- mv : move <file> <folder>
+- mv can be used to change file name
+- echo : print … whatever ...
+- date : give date
+
+Git
+- Setup
+- git config --global user.name “Your name"
+- git config --global user.email “Your email"
+- git config —list
+
+Github
+- start by starting repo
+- make directory, go to directory, and type
+git init # starts it locally
+git remote add origin https://github.com/yourusername/repo_name.git # connect to its remote version
+- start by forking another person's
+- click fork on the person’s repo
+git clone https://github.com/yourusername/repo_name.git # clone to current directory
+- steps from workspace and local
+- Add
+git add . # adds all new files
+git add -u # updates all changes to files
+git add -A # does both
+- Commit
+git commit -m “message” # message is the description for the change
+- steps from local to remote
+git push # push to remote server
+- you may choose to start new branch without changing master file
+git checkout -b <branchname>
+git branch # see what branch you’re on
+- bring changes back to master (not understanding checkout exactly … )
+git checkout master
+- ask changes to added to repo through pull
+git pull
+
+Markdown
+- .MD is a markdown file
+- in markdown # is not commenting
+- headings
+## secondary heading
+### tertiary heading
+- list
+* first time in list
+* ...
+
+R packages
+available.packages() # gives all packages
+- bioconductor, just like CRAN
+source(“http://bioconductor.org/biocLite.R”)
+biocLite() # will install many packages
+
+Rtools
+
+Week 3:
+- descriptive
+- exploratory
+- inferential
+- predictive
+- causal
+- mechanistic analysis
+
+- data is quantitative or qualitative information about a set of items
+
+- sensitivity -> prob ( positive test | disease )
+- specificity -> prob ( negative test | no disease )
+- positive predicative value -> prob ( disease | positive test )
+- negative predicative value -> prob ( no disease | negative test )
+- accuracy -> prob ( correct outcome )

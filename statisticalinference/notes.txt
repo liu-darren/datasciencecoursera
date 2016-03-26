@@ -1,0 +1,70 @@
+## WEEK 1 ##
+
+- estimation of population from noisy sample
+
+different modes of statistical inference
+- bayesian vs frequentist, line is grey
+
+- mutually exclusive can not simulaneously occur
+- P(A U B) = P(A) + P(B) for mututally exclusive sets
+- P(A U B) = P(A) + P(B) - P(A N B) for non-exclusive
+
+- random variables is the numerical outcome (response?)
+- discrete or numeric
+
+- PMF: proability mass function (same as PDF? d for density)
+- the function that defines the probability behavior, like a bell curve
+- always larger than or equal to 0
+- sum of possible values add up to one
+
+- bernoulli trials
+- p(x) = (1/2)^x * (1/2)^(1-x)
+
+- CDF: probability density function
+- the actual probability space under the curve, to the left of a given value
+- the same idea but to the right is survival function
+- pbeta, pnorm, p .... gives the CDF
+
+- the a-th quantile of a distribution with distribution function F is the point x-a so that F(x-a) = a
+- example, we can expect a quantile to occur at less or equal to x
+- percentile is just quantile with % attached at the end
+- median is 50th percentile
+
+- qbeta, qnorm q ... takes in the probability and gives the quantile
+
+P (A | B) = P(A N B) / P(B)
+P (A | B) = P(A)P(B) / P(B) = P(A) if A is independent of B
+
+- Bayes's rule
+- we can obtain P(B|A) if we know P(A|B) using:
+P(A|B)P(B) / ( P(A|B)P(B) + P(A|B^c)P(B^c) )
+and knowing P(B) mariginalied over A??
+
+- let +/- be positive/negative test results
+- D and D^c be actual patient having and not having disease
+
+- sensitivity = P(+ | D)
+- specificity = P(- | D^c)
+- prevalence = P(D)
+- likelihood ratio = ( P(D|+) / P(D^c|+) ) * (P(D)/P(D^c))
+
+% some odds gibberish the lecturer is reading off his notes without explaining %
+
+- IID independently identically distributed
+- expected value
+- sum(value * probability)
+- it is also the center of mass
+- properties of distributions
+- average of random variables is itself a random variable and its associated distribution has an expected value
+- center of this distribution is the same as that of the original distribution
+
+- relationship of sample means and population mean
+- sample mean is the center of mass of a set of observed data, or the sample
+- population mean is the center of mass of the population
+- the sample mean is an estimate of the population mean
+- the sample mean is unbiased, the mean of its distribution is the mean its trying to estimate
+- the more data that goes into each set of samples, n = 10, 20, ..., repeated N many times, the more concentrated the mass is around the population mean
+
+
+
+
